@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://cdn.bootcss.com/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.min.js"></script>
+    <![endif]-->
+
+    <!--common meta-->
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <title>问题中心 - 墨书香</title>
+    <meta name="keywords" content="墨书香,墨书香官网,图文编辑软件,墨书香下载,图文创作,创作软件,原创社区,小说,散文,写作,阅读"/>
+    <meta name="description" content="墨书香是一个优质的创作社区，在这里，你可以任性地创作，一篇短文、一张照片、一首诗、一幅画……我们相信，每个人都是生活中的艺术家，有着无穷的创造力。"/>
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!--  Meta for OpenGraph -->
+    <meta property="og:site_name" content="墨书香">
+    <meta property="og:title" content="梅干菜锅盔">
+    <meta property="og:url" content="https://www.moshuxiang.com/p/15631451">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="泡梅干菜可以咸一点，否则...">
+    <meta property="og:image" content="http://img.org/126154516551.png">
+
+    <!--common js & css-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+    <!--Iconfont-->
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_882094_9m8yax4xmj4.css">
+
+    <!--custom common-->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/search-prompt.css">
+    <script src="js/search-prompt.js"></script>
+    <script src="js/common.js"></script>
+
+    <!--private-->
+    <link rel="stylesheet" href="css/question.css">
+</head>
+
+<body>
+
+
+<!--顶部导航-->
+<nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="ui secondary menu container">
+        <a class="menu-logo" href="index.html" target="_self"></a>
+        <a class="item discover-btn" href="index.html" target="_self">
+            发现
+        </a>
+        <form class="navbar-form navbar-left search-form" name="searchForm" role="search">
+            <div class="ui category search">
+                <div class="ui left icon input">
+                    <input class="prompt" type="text" placeholder="小程序/区块链">
+                    <i class="search icon"></i>
+                </div>
+            </div>
+        </form>
+
+        <div class="right menu">
+            <a class="ui item red-stroke" href="login.html" target="_blank">登录</a>
+            <a class="ui item red-stroke" href="sign_up.html" target="_blank">注册</a>
+            <a class="ui item red-btn" href="editor.html" target="_blank">写文章</a>
+            <div class="ui inline dropdown user-dropdown">
+                <div class="image">
+                    <img class="ui avatar image mini" src="images/user-logo.jpg">
+                    <span class="notification"></span>
+                </div>
+                <i class="dropdown icon"></i>
+                <div class="menu user-menu" data-filtered="filtered">
+                    <a class="item" href="home.html" target="_blank">
+                        <span class="iconfont icon-user"></span>
+                        我的主页
+                    </a>
+                    <a class="item" href="bookmark.html" target="_blank">
+                        <span class="iconfont icon-favorfill"></span>
+                        收藏的文章
+                    </a>
+                    <a class="item" href="follow-author.html" target="_blank">
+                        <span class="iconfont icon-likefill"></span>
+                        关注
+                    </a>
+                    <a class="item" href="message.html" target="_blank">
+                        <span class="iconfont icon-xiaoxi1"></span>
+                        消息
+                        <span class="ui red label">2</span>
+                    </a>
+                    <a class="item" href="setting.html" target="_blank">
+                        <span class="iconfont icon-shezhi"></span>
+                        设置
+                    </a>
+                    <a class="item" href="help.html" target="_blank">
+                        <span class="iconfont icon-communityfill"></span>
+                        帮助与反馈
+                    </a>
+                    <div>
+                        <form name="logout" method="post" action="" class="logout-form">
+                            <a href="javascript:document.logout.submit()" class="log-out">
+                                <span class="iconfont icon-icon"></span>
+                                退出
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container index">
+    <div class="row">
+
+        <!--问题列表-->
+        <div class="col-xs-8 main app-main">
+            <div>
+                <div class="category-title">热门问题</div>
+                <ul class="questions">
+                    <li><a href="#" class="question-title"> 为什么文章会被锁定？</a></li>
+                    <li><a href="#" class="question-title"> 为什么你被封号？ </a></li>
+                    <li><a href="#" class="question-title"> 如何注销简书账号 </a></li>
+                    <li><a href="#" class="question-title"> 文章列表处的缩略图不显示怎么办？ </a></li>
+                    <li><a href="#" class="question-title"> 墨书香官方专题投稿指南大全</a></li>
+                    <li><a href="#" class="question-title"> 关于举报“抄袭类文章”的说明 </a></li>
+                    <li><a href="#" class="question-title"> 想要连载功能不？那你得先有个像样的文集 </a></li>
+                    <li><a href="#" class="question-title"> 如何在墨书香进行创作 </a></li>
+                    <li><a href="#" class="question-title">  删除的文章如何找回，有回收站吗？ </a></li>
+
+                </ul>
+            </div>
+            <div>
+                <div class="category-title">如何玩转墨书香</div>
+                <ul class="questions">
+                    <li><a href="#" class="question-title"> 怎么关闭评论</a></li>
+                    <li><a href="#" class="question-title"> 如何在简书进行创作 </a></li>
+                    <li><a href="#" class="question-title"> 发现页热门文章使用指南 </a></li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="category-title">简书账号问题</div>
+                <ul class="questions">
+                    <li><a href="#" class="question-title"> 为什么文章会被锁定？</a></li>
+                    <li><a href="#" class="question-title"> 如果你被封号了？ </a></li>
+                    <li><a href="#" class="question-title"> 墨书香账号绑定解绑相关问题汇总 </a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!--去反馈-->
+        <aside class="col-xs-4 aside">
+            <div class="app-aside border-line">
+                <div class="go-to-feedback">
+                    <img src="images/user-logo.jpg">
+                    <div class="text">没解决你的疑问？<a href="help.html"> 去反馈 <i class="iconfont icon-right"></i></a></div>
+                </div>
+
+                <div class="hint-text">帐户冻结、文章锁定问题，请邮件联系 help@jianshu.com</div>
+                <div class="hint-text">程序/功能问题、bug 反馈，可添加“墨书香专题社群委员会委员长”微信号：Jianshu_dama，备注“Web公测”，加群第一时间获得帮助。</div>
+                <div class="hint-text">也可以<a href="#">联系我们 <i class="iconfont icon-right"></i></a></div>
+            </div>
+        </aside>
+    </div>
+</div>
+
+</body>
+
+</html>

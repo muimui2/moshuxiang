@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://cdn.bootcss.com/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.min.js"></script>
+    <![endif]-->
+
+    <!--common meta-->
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <title>墨书香 - 分享你的创作</title>
+    <meta name="keywords" content="墨书香,墨书香官网,图文编辑软件,墨书香下载,图文创作,创作软件,原创社区,小说,散文,写作,阅读"/>
+    <meta name="description" content="墨书香是一个优质的创作社区，在这里，你可以任性地创作，一篇短文、一张照片、一首诗、一幅画……我们相信，每个人都是生活中的艺术家，有着无穷的创造力。"/>
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!--common js & css-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <!--Iconfont-->
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_882094_9m8yax4xmj4.css">
+
+    <!--custom common-->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/search-prompt.css">
+    <link rel="stylesheet" href="css/article-list.css">
+    <script src="js/search-prompt.js"></script>
+    <script src="js/common.js"></script>
+
+    <!--private-->
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+
+
+    <style type="text/css" rel="stylesheet">
+
+        @media screen and (min-width: 768px) and (max-width: 1023px){
+            /*导航栏*/
+            .ui.secondary.menu.container{
+                width: 748px;
+                margin: 0 10px!important;
+            }
+
+            .discover-btn-index{
+                display: none!important;
+            }
+
+            .navbar-form.navbar-left.search-form, .prompt, .ui.left.icon.input{
+                width: 200px;
+            }
+
+            .right.menu a{
+                margin-left: 10px;
+            }
+
+            .user-dropdown{
+                padding-left: 10px;
+            }
+
+            /*海报*/
+
+            .col-xs-12{
+                margin: 0 10px;
+                width: 748px;
+                display: flex;
+                display: -webkit-flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            #myCarousel{
+                height: 210px;
+            }
+
+            /*首页主体部分*/
+            .row.main-row{
+                width: 768px;
+                padding: 25px 10px 0 10px;
+            }
+
+            /*回到顶部*/
+            .side-tool{
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<!--顶部导航-->
+<nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="ui secondary menu container">
+        <a class="menu-logo" href="index.html" target="_self"></a>
+        <a class="item discover-btn-index" href="index.html" target="_self" style="color: #ec414d">
+            发现
+        </a>
+        <form class="navbar-form navbar-left search-form" name="searchForm" role="search">
+            <div class="ui category search">
+                <div class="ui left icon input">
+                    <input class="prompt" type="text" placeholder="小程序/区块链">
+                    <i class="search icon"></i>
+                </div>
+            </div>
+        </form>
+
+        <div class="right menu">
+            <a class="ui item red-stroke" href="login.html" target="_blank">登录</a>
+            <a class="ui item red-stroke" href="sign_up.html" target="_blank">注册</a>
+            <a class="ui item red-btn" href="editor.html" target="_blank">写文章</a>
+            <div class="ui inline dropdown user-dropdown">
+                <div class="image">
+                    <img class="ui avatar image mini" src="images/user-logo.jpg">
+                    <span class="notification"></span>
+                </div>
+                <i class="dropdown icon"></i>
+                <div class="menu user-menu" data-filtered="filtered">
+                    <a class="item" href="home.html" target="_blank">
+                        <span class="iconfont icon-user"></span>
+                        我的主页
+                    </a>
+                    <a class="item" href="bookmark.html" target="_blank">
+                        <span class="iconfont icon-favorfill"></span>
+                        收藏的文章
+                    </a>
+                    <a class="item" href="follow-author.html" target="_blank">
+                        <span class="iconfont icon-likefill"></span>
+                        关注
+                    </a>
+                    <a class="item" href="message.html" target="_blank">
+                        <span class="iconfont icon-xiaoxi1"></span>
+                        消息
+                        <span class="ui red label">2</span>
+                    </a>
+                    <a class="item" href="setting.html" target="_blank">
+                        <span class="iconfont icon-shezhi"></span>
+                        设置
+                    </a>
+                    <a class="item" href="help.html" target="_blank">
+                        <span class="iconfont icon-communityfill"></span>
+                        帮助与反馈
+                    </a>
+                    <div>
+                        <form name="logout" method="post" action="" class="logout-form">
+                            <a href="javascript:document.logout.submit()" class="log-out">
+                                <span class="iconfont icon-icon"></span>
+                                退出
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--主体内容-->
+<div class="container index" style="padding-bottom: 0!important;">
+
+    <!--广告，主分类-->
+    <div class="row">
+        <div class="col-xs-12">
+
+            <!--广告轮播-->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+                <!-- 轮播（Carousel）指标 -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+
+                <!-- 轮播（Carousel）项目 -->
+                <div class="carousel-inner">
+                    <a class="item active" href="blog.html" target="_blank">
+                        <img src="images/ads_02.png" alt="First slide">
+                    </a>
+                    <a class="item" href="blog.html" target="_blank">
+                        <img src="images/ads_01.png" alt="Second slide">
+                    </a>
+                    <a class="item" href="blog.html" target="_blank">
+                        <img src="images/ads_04.png" alt="Third sdide">
+                    </a>
+                    <a class="item" href="blog.html" target="_blank">
+                        <img src="images/ads_03.png" alt="Third sdide">
+                    </a>
+                    <a class="item" href="blog.html" target="_blank">
+                        <img src="images/ads_05.png" alt="Third sdide">
+                    </a>
+                </div>
+
+                <!-- 轮播（Carousel）导航 -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="iconfont icon-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="iconfont icon-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+            </div>
+
+            <!--主题分类-->
+            <div class="ui grid grid-classify">
+                <div class="four wide column">
+                    <a class="ui yellow segment" href="recommendation-article.html" target="_blank">
+                        <span class="iconfont icon-yooxi"></span>
+                        热门文章
+                    </a>
+                </div>
+                <div class="four wide column">
+                    <a class="ui purple segment" href="recommendation-author.html" target="_blank">
+                        <span class="iconfont icon-71"></span>
+                        优选作者
+                    </a>
+                </div>
+                <div class="four wide column">
+                    <a class="ui olive segment" href="recommendation-corpus.html" target="_blank">
+                        <span class="iconfont icon-jingpin-" style="font-size: 34px"></span>
+                        精选文集
+                    </a>
+                </div>
+                <div class="four wide column">
+                    <a class="ui pink segment" href="recommended-column.html" target="_blank">
+                        <span class="iconfont icon-qunfengweinituijian"></span>
+                        推荐专栏
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--首页主体内容-->
+    <div class="row main-row">
+        <!--文章列表-->
+        <div class="col-xs-8 main main-index">
+            <ul class="ui unstackable items index-list">
+                <li class="item">
+                    <div class="content article-right">
+                        <a class="header" href="blog.html" target="_blank">渴望孤独 为何我 这刻会想 重头覓对象 哪一天 不愿做饭 不用做饭 烫些秋葵渴望孤独 为何我 这刻会想 重头覓对象 哪一天 不愿做饭 不用做饭 烫些秋葵不愿做饭 不用做饭 烫些秋葵</a>
+                        <div class="description article-description">
+                            <p class="gray-text">现代的搜索引擎，一般会具备"Suggest As You Type"功能，即在用户输入搜索的过程中，进行自动补全或者纠错。 通过协助用户输入更精准的关键词，提高后续全文搜索阶段文档匹配的程度。例如在Google上输入部分关键词，甚至输入拼写错误的关键词时，它依然能够提示出用户想要输入的内容</p>
+                        </div>
+                        <div class="comment-bar">
+                            <a class="authors-name" href="home.html">王卫东</a>
+                            <span><i class="iconfont icon-liulan-mian"></i>10</span>
+                            <span><i class="iconfont icon-likefill"></i>8</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="blog.html" target="_blank"><img class="article-image default-image" src="https://picsum.photos/125/97/?random"></a>
+                    <div class="content article-right">
+                        <a class="header" href="blog.html" target="_blank">logstash jdbc 增量同步到kafka</a>
+                        <div class="description article-description">
+                            <p class="gray-text">插件将以sql_last_value存储在配置中的元数据文件的形式持久保存参数last_run_metadata_path。在查询执行后，该文件将被更新为当前值sql_last_value</p>
+                        </div>
+                        <div class="comment-bar">
+                            <a class="authors-name" href="home.html">女博士</a>
+                            <span><i class="iconfont icon-liulan-mian"></i>5</span>
+                            <span><i class="iconfont icon-likefill"></i>5</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="blog.html" target="_blank"><img class="article-image default-image" src="https://picsum.photos/250/194/?random"></a>
+                    <div class="content article-right">
+                        <a class="header" href="blog.html" target="_blank">CSS设置行间距和字间距</a>
+                        <div class="description article-description">
+                            <p class="gray-text">在CSS中通过line-height属性来实现行间距的设置，line-height的值表示的是两行文字之间基线的距离</p>
+                        </div>
+                        <div class="comment-bar">
+                            <a class="authors-name" href="home.html">女博士</a>
+                            <span><i class="iconfont icon-liulan-mian"></i>5</span>
+                            <span><i class="iconfont icon-likefill"></i>5</span>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+            <button class="fluid ui button load-more">加载更多文章</button>
+        </div>
+
+        <!--侧边栏-->
+        <aside class="col-xs-4 aside index-aside">
+            <!--热门搜索-->
+            <div class="hot-tags">
+                <div class="hot-tags-title">
+                    <span class="title">热门搜索</span>
+                    <a class="search-switcher switcher">换一批<i class="iconfont icon-duomeitiicon-"></i></a>
+                </div>
+                <div class="ui tag labels tags-list">
+                    <a class="ui label">
+                        故事会
+                    </a>
+                    <a class="ui label">
+                        摄影
+                    </a>
+                    <a class="ui label">
+                        自然科普
+                    </a>
+                    <a class="ui label">
+                        读书
+                    </a>
+                    <a class="ui label">
+                        IT·互联网
+                    </a>
+                    <a class="ui label">
+                        手绘
+                    </a>
+                    <a class="ui label">
+                        电影
+                    </a>
+
+                </div>
+            </div>
+
+            <!--推荐作者-->
+            <div class="hot-tags" style="margin-top: 40px">
+                <div class="hot-tags-title">
+                    <span class="title">推荐作者</span>
+                    <a class="author-switcher switcher">换一批<i class="iconfont icon-duomeitiicon-"></i></a>
+                </div>
+                <ul class="hot-list">
+                    <li class="item">
+                        <div class="item-body">
+                            <a class="item-header"><img class="avatar" src="https://picsum.photos/52/52/?random"></a>
+                            <div class="content">
+                                <a class="title">就觉得你很v你发合肥举行的决赛毒啊节快乐</a>
+                                <div class="description">
+                                    <span class="article-count"><i class="iconfont icon-wenzhang2"></i>965</span>
+                                    <span class="likes-count"><i class="iconfont icon-likefill"></i>1458</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="follow-action">
+                            <i class="iconfont icon-guanzhu1"></i>
+                            关注
+                        </a>
+                    </li>
+                    <li class="item">
+                        <div class="item-body">
+                            <a class="item-header"><img class="avatar" src="https://picsum.photos/70/70/?random"></a>
+                            <div class="content">
+                                <a class="title">成落尘</a>
+                                <div class="description">
+                                    <span class="article-count"><i class="iconfont icon-wenzhang2"></i>201</span>
+                                    <span class="likes-count"><i class="iconfont icon-likefill"></i>36</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="follow-action">
+                            <i class="iconfont icon-guanzhu1"></i>
+                            关注
+                        </a>
+                    </li>
+                    <li class="item">
+                        <div class="item-body">
+                            <a class="item-header"><img class="avatar" src="https://picsum.photos/48/48/?random"></a>
+                            <div class="content">
+                                <a class="title">千始</a>
+                                <div class="description">
+                                    <span class="article-count"><i class="iconfont icon-wenzhang2"></i>7845</span>
+                                    <span class="likes-count"><i class="iconfont icon-likefill"></i>8</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="follow-action">
+                            <i class="iconfont icon-guanzhu1"></i>
+                            关注
+                        </a>
+                    </li>
+                    <li class="item">
+                        <div class="item-body">
+                            <a class="item-header"><img class="avatar" src="https://picsum.photos/124/124/?random"></a>
+                            <div class="content">
+                                <a class="title">甲壳虫爬上月亮</a>
+                                <div class="description">
+                                    <span class="article-count"><i class="iconfont icon-wenzhang2"></i>124</span>
+                                    <span class="likes-count"><i class="iconfont icon-likefill"></i>78</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="follow-action">
+                            <i class="iconfont icon-guanzhu1"></i>
+                            关注
+                        </a>
+                    </li>
+                    <li class="item">
+                        <div class="item-body">
+                            <a class="item-header"><img class="avatar" src="https://picsum.photos/90/90/?random"></a>
+                            <div class="content">
+                                <a class="title">小城旧事</a>
+                                <div class="description">
+                                    <span class="article-count"><i class="iconfont icon-wenzhang2"></i>3609</span>
+                                    <span class="likes-count"><i class="iconfont icon-likefill"></i>457</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="follow-action">
+                            <i class="iconfont icon-guanzhu1"></i>
+                            关注
+                        </a>
+                    </li>
+                </ul>
+                <a class="fluid ui button basic" href="recommendation-author.html" target="_blank">查看更多<i class="iconfont icon-right"></i></a>
+            </div>
+
+            <!--最新文章-->
+            <div class="hot-tags" style="margin-top: 55px">
+                <div class="hot-tags-title">
+                    <span class="title">最新文章</span>
+                    <a class="article-switcher switcher">换一批<i class="iconfont icon-duomeitiicon-"></i></a>
+                </div>
+                <ul class="new-list">
+                    <li class="item">
+                        <a class="header" href="blog.html" target="_blank">基于Spring Boot、AngularJS、CSS3、HTML5的响应式文件浏览管理器HTML5的响应式文件浏览管理器HTML5的响应式文件浏览管理器</a>
+                        <div class="content">
+                            <a class="description" href="home.html" target="_blank">风也很大了</a>
+                            <span class="time">2018-12-25 12:14:07</span>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <a class="header" href="blog.html" target="_blank">AngularJS分页显示的简单案例</a>
+                        <div class="content">
+                            <a class="description" href="home.html" target="_blank">蚂蚁感冒了</a>
+                            <span class="time">2018-04-07 15:01:25</span>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <a class="header" href="blog.html" target="_blank">深入理解JVM--JVM垃圾回收机制</a>
+                        <div class="content">
+                            <a class="description" href="home.html" target="_blank">未了生</a>
+                            <span class="time">2019-01-03 07:03:48</span>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <a class="header" href="blog.html" target="_blank">ik分词器的配置</a>
+                        <div class="content">
+                            <a class="description" href="home.html" target="_blank">不善言谈者</a>
+                            <span class="time">2014-10-07 01:20:07</span>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <a class="header" href="blog.html" target="_blank">IKAnalyzer 独立使用 配置扩展词典</a>
+                        <div class="content">
+                            <a class="description" href="home.html" target="_blank">青衣煮茶</a>
+                            <span class="time">2017-02-08 03:48:07</span>
+                        </div>
+                    </li>
+                </ul>
+                <a class="fluid ui button basic" href="recommendation-article.html" target="_blank" >查看更多<i class="iconfont icon-right"></i></a>
+            </div>
+
+        </aside>
+    </div>
+
+    <!--脚注-->
+    <footer class="row footer">
+        <div class="col-lg-8 gray-text">
+            © 墨书香 网络有限公司
+            <span style="padding: 0 10px">|</span>
+            <a class="gray-text" href="http://www.12377.cn/" target="_blank">中山网安备 33010602001878号</a>
+        </div>
+    </footer>
+
+</div>
+
+<!--右下角菜单-->
+<div class="side-tool">
+    <!--回到顶部-->
+    <a id="goToTop" class="ui icon button title-button">
+        <span class="iconfont icon-shouqi title-icon"></span>
+    </a>
+
+    <div class="help-menu ui right pointing dropdown icon button title-button">
+        <span class="iconfont icon-xinxi1 title-icon"></span>
+        <div class="menu">
+            <a class="item" href="contact.html" target="_blank"><i class="iconfont icon-lianximaijia"></i>联系我们</a>
+            <a class="item" href="help.html" target="_blank"><i class="iconfont icon--lianxikefu"></i>帮助中心</a>
+            <a class="item" href="protocol.html" target="_blank"><i class="iconfont icon-heyueguanli"></i>墨书香协议</a>
+            <a class="item" href="protocol-privacy.html" target="_blank"><i class="iconfont icon-zhengcezhinan_f"></i>隐私政策</a>
+        </div>
+    </div>
+
+    <div class="ui right icon dropdown pointing button side-tool-QR title-button">
+        <span class="iconfont icon-guanzhu1 title-icon"></span>
+        <div class="menu">
+            <div class="item">
+                <div class="content">
+                    <img class="item-image" src="images/QRcode.png" alt="微信二维码">
+                    <span class="title">扫码关注公众号</span>
+                    <span>随时随地发现和创作内容</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

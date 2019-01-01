@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+.feedback-content{
+    max-width: 450px!important;
+    white-space: pre-wrap!important;
+}

@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+.follow-author{
+    margin: 0;
+    position: relative;
+}
+
+.follow-author> .avatar>img{
+    width: 60px;
+    height: 60px;
+}
+
+.follow-author .personal-name{
+   /* font-size: 15px*/;
+}
+
+/*.follow-title{
+    padding: 15px 15px;
+    border-left: 3px solid #ec414d;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(236, 65, 77, 0.09);
+}*/
+
+.follow-author .introduction>span{
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+.add-follow-list>li{
+    border-bottom: 1px solid #f1f1f1;
+    padding: 40px 0;
+}
+.add-follow-list .intro .intri-info{
+    font-size: 12px;
+    color: #969696;
+    display: inline-block;
+}
+
+
+.add-follow-list .intro .icon-leimu{
+    font-size:10px;
+    color: #969696;
+}
+
+.following{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.following .iconfont{
+    font-size: 12px;
+}
+
+.trigger-menu .icon-leimu{
+    font-size: 13px;
+    vertical-align: 2px;
+}
+.porpus-avatar img{
+    border-radius: 3px!important;
+    -webkit-box-shadow: 1px 1px 12px #cccccc;
+    -moz-box-shadow: 1px 1px 12px #cccccc;
+    box-shadow: 1px 1px 12px #cccccc;
+}
+
+.cancel-btn{
+    padding: 6px 12px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.follow-avatar{
+    width: 40px!important;
+    height: 40px!important;
+}
+
+.follow-name{
+    font-size: 15px!important;
+}
+
+.follow-item{
+    padding: 12px 0!important;
+}
+
+.corpus-avator{
+    width: 80px!important;
+    height: 110px!important;
+}
+
+.column-avatar{
+    width: 80px!important;
+    height: 80px!important;
+}
+
+.corpus-avator img, .column-avatar img{
+    border-radius: 5px!important;
+}
+
+.item-header{
+    margin: 0!important;
+}
+
+
+
+
+
+

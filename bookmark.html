@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://cdn.bootcss.com/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.min.js"></script>
+    <![endif]-->
+
+    <!--common meta-->
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <title>收藏的文章 - 墨书香</title>
+    <meta name="keywords" content="墨书香,墨书香官网,图文编辑软件,墨书香下载,图文创作,创作软件,原创社区,小说,散文,写作,阅读"/>
+    <meta name="description" content="墨书香是一个优质的创作社区，在这里，你可以任性地创作，一篇短文、一张照片、一首诗、一幅画……我们相信，每个人都是生活中的艺术家，有着无穷的创造力。"/>
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!--  Meta for OpenGraph -->
+    <meta property="og:site_name" content="墨书香">
+    <meta property="og:title" content="梅干菜锅盔">
+    <meta property="og:url" content="https://www.moshuxiang.com/p/15631451">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="泡梅干菜可以咸一点，否则...">
+    <meta property="og:image" content="http://img.org/126154516551.png">
+
+    <!--common js & css-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+    <!--Iconfont-->
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_882094_9m8yax4xmj4.css">
+
+    <!--custom common-->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/search-prompt.css">
+    <script src="js/search-prompt.js"></script>
+    <script src="js/common.js"></script>
+
+    <!--private-->
+    <link rel="stylesheet" href="css/article-list.css">
+    <link rel="stylesheet" href="css/bookmark.css">
+    </head>
+</head>
+<body>
+
+<!--顶部导航-->
+<nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="ui secondary menu container">
+        <a class="menu-logo" href="index.html" target="_self"></a>
+        <a class="item discover-btn" href="index.html" target="_self">
+            发现
+        </a>
+        <form class="navbar-form navbar-left search-form" name="searchForm" role="search">
+            <div class="ui category search">
+                <div class="ui left icon input">
+                    <input class="prompt" type="text" placeholder="小程序/区块链">
+                    <i class="search icon"></i>
+                </div>
+            </div>
+        </form>
+
+        <div class="right menu">
+            <a class="ui item red-stroke" href="login.html" target="_blank">登录</a>
+            <a class="ui item red-stroke" href="sign_up.html" target="_blank">注册</a>
+            <a class="ui item red-btn" href="editor.html" target="_blank">写文章</a>
+            <div class="ui inline dropdown user-dropdown">
+                <div class="image">
+                    <img class="ui avatar image mini" src="images/user-logo.jpg">
+                    <span class="notification"></span>
+                </div>
+                <i class="dropdown icon"></i>
+                <div class="menu user-menu" data-filtered="filtered">
+                    <a class="item" href="home.html" target="_blank">
+                        <span class="iconfont icon-user"></span>
+                        我的主页
+                    </a>
+                    <a class="item" href="bookmark.html" target="_blank">
+                        <span class="iconfont icon-favorfill"></span>
+                        收藏的文章
+                    </a>
+                    <a class="item" href="follow-author.html" target="_blank">
+                        <span class="iconfont icon-likefill"></span>
+                        关注
+                    </a>
+                    <a class="item" href="message.html" target="_blank">
+                        <span class="iconfont icon-xiaoxi1"></span>
+                        消息
+                        <span class="ui red label">2</span>
+                    </a>
+                    <a class="item" href="setting.html" target="_blank">
+                        <span class="iconfont icon-shezhi"></span>
+                        设置
+                    </a>
+                    <a class="item" href="help.html" target="_blank">
+                        <span class="iconfont icon-communityfill"></span>
+                        帮助与反馈
+                    </a>
+                    <div>
+                        <form name="logout" method="post" action="" class="logout-form">
+                            <a href="javascript:document.logout.submit()" class="log-out">
+                                <span class="iconfont icon-icon"></span>
+                                退出
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--页面主体内容-->
+<div class="container index">
+    <div class="row center-container">
+        <div class="col-xs-9 main">
+
+            <!--文章标题-->
+            <div class="bookmark-title"><span class="iconfont icon-favorfill"></span>收藏的文章</div>
+
+            <!--文章列表-->
+            <div class="main main-index bm-item">
+                <ul class="ui unstackable items index-list">
+                    <li class="item">
+                        <div class="content article-right">
+                            <a class="header" href="blog.html" target="_blank">渴望孤独 为何我 这刻会想 重头覓对象 哪一天 不愿做饭 不用做饭 烫些秋葵渴望孤独 为何我 这刻会想 重头覓对象 哪一天 不愿做饭 不用做饭 烫些秋葵不愿做饭 不用做饭 烫些秋葵</a>
+                            <div class="description article-description">
+                                <p class="gray-text">现代的搜索引擎，一般会具备"Suggest As You Type"功能，即在用户输入搜索的过程中，进行自动补全或者纠错。 通过协助用户输入更精准的关键词，提高后续全文搜索阶段文档匹配的程度。例如在Google上输入部分关键词，甚至输入拼写错误的关键词时，它依然能够提示出用户想要输入的内容</p>
+                            </div>
+                            <div class="comment-bar">
+                                <a class="authors-name" href="home.html">王卫东</a>
+                                <span><i class="iconfont icon-liulan-mian"></i>10</span>
+                                <span><i class="iconfont icon-likefill"></i>8</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <a href="blog.html" target="_blank"><img class="article-image default-image" src="https://picsum.photos/125/97/?random"></a>
+                        <div class="content article-right">
+                            <a class="header" href="blog.html" target="_blank">logstash jdbc 增量同步到kafka</a>
+                            <div class="description article-description">
+                                <p class="gray-text">插件将以sql_last_value存储在配置中的元数据文件的形式持久保存参数last_run_metadata_path。在查询执行后，该文件将被更新为当前值sql_last_value</p>
+                            </div>
+                            <div class="comment-bar">
+                                <a class="authors-name" href="home.html">女博士</a>
+                                <span><i class="iconfont icon-liulan-mian"></i>5</span>
+                                <span><i class="iconfont icon-likefill"></i>5</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <a href="blog.html" target="_blank"><img class="article-image default-image" src="https://picsum.photos/250/194/?random"></a>
+                        <div class="content article-right">
+                            <a class="header" href="blog.html" target="_blank">CSS设置行间距和字间距</a>
+                            <div class="description article-description">
+                                <p class="gray-text">在CSS中通过line-height属性来实现行间距的设置，line-height的值表示的是两行文字之间基线的距离</p>
+                            </div>
+                            <div class="comment-bar">
+                                <a class="authors-name" href="home.html">女博士</a>
+                                <span><i class="iconfont icon-liulan-mian"></i>5</span>
+                                <span><i class="iconfont icon-likefill"></i>5</span>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!--分页部分-->
+            <div class="select-page">
+                <ul class="pagination">
+                    <li><a href="#">上一页</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a class="active" href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

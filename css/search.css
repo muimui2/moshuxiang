@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+.search-nav{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-nav>li{
+    width: 25%;
+}
+
+.search-nav>li>a{
+    width: 100%;
+    display: inline-block;
+    padding: 12px 0px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+.sort-type .icon-xiala{
+    font-size: 12px;
+}
+
+.sort-count{
+    float: right;
+}
+
+.sort-type, .sort-type>a, .sort-type>div{
+    font-size: 12px;
+    color: #969696;
+}
+
+.sort-type>div{
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+.sort-type>div .iconfont{
+    padding-left: 5px;
+}
+
+.sort-type{
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(150, 150, 150, 0.2);
+}
+
+.time-wrap{
+    position: absolute;
+    background-color: white;
+    -webkit-box-shadow: 1px 1px 12px #cccccc;
+    -moz-box-shadow: 1px 1px 12px #cccccc;
+    box-shadow: 1px 1px 12px #cccccc;
+}
+
+.time-wrap>li>a{
+    display: inline-block;
+    padding: 6px 10px;
+}
+
+.search-summary{
+    width: 100%;
+    padding: 0;
+}
+
+.search-list li:last-child, .search-entry li:last-child{
+    border-bottom: none;
+}
+
+.time-list{
+    border-radius: 3px;
+    display: none;
+    position: absolute;
+    left: -15px;
+    background-color: white;
+    -webkit-box-shadow: 1px 1px 2px #cccccc;
+    -moz-box-shadow: 1px 1px 2px #cccccc;
+    box-shadow: 1px 1px 2px #cccccc;
+}
+
+
+.select-time:hover .time-list{
+    display: block;
+}
+
+.time-list li{
+    padding: 7px 17px;
+    white-space: nowrap;
+    border-bottom: 1px solid #efefef;
+}
+
+.time-list .time{
+    background-color: #f2f2f2;
+    margin: 0;
+}
+
+.time-list li:hover{
+    background-color: #f2f2f2;
+}
+
+.search-list .author-name img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.search-list .author-name span{
+    font-size: 14px;
+    color: #333333;
+}
+
+/*搜索用户*/
+.search-entry li{
+    padding: 30px 0;
+    border-bottom: 1px solid #f4f5f5;
+}
+
+.search-entry .main-top{
+    padding-bottom: 0;
+}
+
+.signature .point{
+    font-weight: bold;
+}
+
+.lable{
+    padding-top: 3px;
+}
+
+.search-entry .signature {
+    margin-top:0 ;
+}
+
+.lable a{
+    border-radius: 20px;
+    padding: 0 5px;
+    font-size: 13px;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.search-entry .avatar img{
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+}
+
+.search-entry .info{
+    margin-left: 0;
+}
+
+.search-entry .name{
+    font-size: 18px;
+}
+
+/*
+搜索文集*/
+
+.search-corpus .avatar{
+    width: 110px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 3px;
+
+}
+
+.search-corpus .avatar img{
+    width: 110px;
+    height: 150px;
+    margin-right: 10px;
+    border-radius: 3px;
+    -webkit-box-shadow: 1px 1px 12px #c4c4c4;
+    -moz-box-shadow: 1px 1px 12px #c4c4c4;
+    box-shadow: 1px 1px 12px #c4c4c4;
+}
+
+.search-corpus .name{
+    font-size: 21px;
+    font-weight: 700;
+}
+
+/*专栏*/
+.search-column .avatar{
+    width: 100px;
+    height: 100px;
+}
+
+.search-column .avatar img{
+    width: 100px;
+    height: 100px;
+}
+
+.search-info{
+    width: 70%;
+}
+
+.search-info .personal-name{
+    font-size: 16px!important;
+}
+
+
+
+
+

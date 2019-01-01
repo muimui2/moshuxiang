@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://cdn.bootcss.com/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.min.js"></script>
+    <![endif]-->
+
+    <!--common meta-->
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <title>深度学习综述 - 梅干菜锅盔 - 墨书香</title>
+    <meta name="keywords" content="墨书香,墨书香官网,图文编辑软件,墨书香下载,图文创作,创作软件,原创社区,小说,散文,写作,阅读"/>
+    <meta name="description" content="墨书香是一个优质的创作社区，在这里，你可以任性地创作，一篇短文、一张照片、一首诗、一幅画……我们相信，每个人都是生活中的艺术家，有着无穷的创造力。"/>
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!--  Meta for OpenGraph -->
+    <meta property="og:site_name" content="墨书香">
+    <meta property="og:title" content="梅干菜锅盔">
+    <meta property="og:url" content="https://www.moshuxiang.com/p/15631451">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="泡梅干菜可以咸一点，否则...">
+    <meta property="og:image" content="http://img.org/126154516551.png">
+
+    <!--common js & css-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+    <!--Iconfont-->
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_882094_9m8yax4xmj4.css">
+
+    <!--custom common-->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/search-prompt.css">
+    <script src="js/search-prompt.js"></script>
+    <script src="js/common.js"></script>
+
+    <!--private-->
+    <link rel="stylesheet" href="css/recommendaton.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <script src="js/blog.js"></script>
+
+    <link rel="stylesheet" href="css/duDialog.css">
+    <script src="js/duDialog.js"></script>
+</head>
+<body>
+
+<!--顶部导航-->
+<nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="ui secondary menu container">
+        <a class="menu-logo" href="index.html" target="_self"></a>
+        <a class="item discover-btn" href="index.html" target="_self">
+            发现
+        </a>
+        <form class="navbar-form navbar-left search-form" name="searchForm" role="search">
+            <div class="ui category search">
+                <div class="ui left icon input">
+                    <input class="prompt" type="text" placeholder="小程序/区块链">
+                    <i class="search icon"></i>
+                </div>
+            </div>
+        </form>
+
+        <div class="right menu">
+            <a class="ui item red-stroke" href="login.html" target="_blank">登录</a>
+            <a class="ui item red-stroke" href="sign_up.html" target="_blank">注册</a>
+            <a class="ui item red-btn" href="editor.html" target="_blank">写文章</a>
+            <div class="ui inline dropdown user-dropdown">
+                <div class="image">
+                    <img class="ui avatar image mini" src="images/user-logo.jpg">
+                    <span class="notification"></span>
+                </div>
+                <i class="dropdown icon"></i>
+                <div class="menu user-menu" data-filtered="filtered">
+                    <a class="item" href="home.html" target="_blank">
+                        <span class="iconfont icon-user"></span>
+                        我的主页
+                    </a>
+                    <a class="item" href="bookmark.html" target="_blank">
+                        <span class="iconfont icon-favorfill"></span>
+                        收藏的文章
+                    </a>
+                    <a class="item" href="follow-author.html" target="_blank">
+                        <span class="iconfont icon-likefill"></span>
+                        关注
+                    </a>
+                    <a class="item" href="message.html" target="_blank">
+                        <span class="iconfont icon-xiaoxi1"></span>
+                        消息
+                        <span class="ui red label">2</span>
+                    </a>
+                    <a class="item" href="setting.html" target="_blank">
+                        <span class="iconfont icon-shezhi"></span>
+                        设置
+                    </a>
+                    <a class="item" href="help.html" target="_blank">
+                        <span class="iconfont icon-communityfill"></span>
+                        帮助与反馈
+                    </a>
+                    <div>
+                        <form name="logout" method="post" action="" class="logout-form">
+                            <a href="javascript:document.logout.submit()" class="log-out">
+                                <span class="iconfont icon-icon"></span>
+                                退出
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--博客主体-->
+<div class="container index">
+    <div class="row">
+        <!--文章主体内容-->
+        <div class="col-xs-9 col-xs-offset-1 main article-main">
+
+            <div class="article">
+                <h1 class="title">深度学习并不是AI的未来</h1>
+                <div class="blog-author">
+                    <div class="content">
+                        <a class="avatar"><img class="image" src="https://picsum.photos/100/100/?random"></a>
+                        <div class="info">
+                            <div class="header">
+                                <a class="name">甲壳虫晒太阳</a>
+                            </div>
+                            <div class="body">
+                                <a class="collection" href="collection.html" target="_blank"><i class="iconfont icon-BAI-wenzhang"></i>朝花夕拾</a>
+                                <span class="view-count"><i class="iconfont icon-liulan"></i>4172</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="operate">
+                        <a class="follow ui toggle button active"><i class="iconfont icon-guanzhu1"></i>关注</a>
+                    </div>
+                </div>
+                <div class="show-content">
+                    <p>听说过QQ禁言，微信禁言，今天的我却被“禁言”了！ 早上起来，我准备对妈妈说一句“早上好！”却发现声音十分沙哑，并且发声困难。</p>
+                    <div style="text-align: center; padding: 20px 0;">
+                        <img src="images/article-detail-02.jpg">
+                    </div>
+                    <p>我马上跟妈妈“汇报情况”，对妈妈做着手势，指了指嗓子。妈妈马上意识到事情的不对劲，急急忙忙问：“怎么了？怎么了？”“嗯嗯！”我哼哼唧唧的，只能说出来这几个字。“呀，嗓子怎么哑了！”妈妈着急地说。</p><p>不一会儿，婆婆从厨房里出来，看到我们坐在沙发上，微笑着说：“赶紧刷牙洗脸，吃饭了。”我正想回答道：“好的”，可喉咙里却只能发出咕噜咕噜的声音。这下婆婆也发现不对劲了，急忙问妈妈：“孩子这是怎么了？”妈妈疑惑地说：“不知是前天晚上哭的，还是体育课上扔垒球兴奋叫的，今天嗓子哑了。”</p>
+                    <p>婆婆似乎很有经验似的说：“哦，没事！你让他喝点白糖水，很快就会好的。还有，今天不能吃酸豇豆这些酸辣菜了！”说着，婆婆就去给我冲糖水了。</p>
+                    <p>我又试着说说话，这次终于可以发出一点微弱的声音了，我在妈妈耳边轻轻地说：“妈妈……要不要……咳咳……给我买点润喉片呀！”
+
+                          “不用！” 妈妈立即否定了我的想法，“你今天只要不大喊大叫，最好是不说话——禁言，到了明天自然会好的。”</p>
+
+                          “嗯！好”为了我的嗓子， 我不得不听从妈妈的建议——“禁言”。
+
+                           <p> 吃饭时，妈妈叫我不要大声说话，把声音调到最小。就这样我和妈妈用低分贝在交流。就算有蚊子从我们两个耳边飞过，都听不到我们的谈话。为了让妈妈听懂，我还试着打手势。
+
+                        就这样，我试着“禁言”了，可没多久，我就又失败了。</p>
+
+                              <p>早上的书法兴趣班，我遇到了好朋友——高翔，我选择和他坐一起。我们可是无话不谈的朋友啊！这样我就把妈妈的叮嘱抛到了脑后，我费力地用嘶哑的声音和他交谈着，他也发现了我声音的不同，便问：“你嗓子哑了吗？”我这才想起要“禁言”，便“唔唔……”地回答着。可真奇怪，越不让我说我越想说，最后终于没忍住，叽里呱啦地和他讲了一大通。
+
+                            “  禁言”的滋味真不好受呀！明天嗓子好了，我一定要说个痛快。</p>
+
+                </div>
+                <span class="gray-text article-foot">版权声明：本文为墨书香原创文章，未经博主允许不得转载。</span>
+
+            </div>
+
+            <div class="article-sticky">
+                <a class="ui icon button" data-tooltip="喜欢" data-inverted="" data-position="right center">
+                    <i class="heart icon"></i>
+                </a>
+                <a class="ui icon button" data-tooltip="评论" data-inverted="" data-position="right center" href="#comment-detail">
+                    <i class="comment icon"></i>
+                </a>
+                <a class="ui icon button" data-tooltip="收藏" data-inverted="" data-position="right center">
+                    <i class="star icon"></i>
+                </a>
+                <a class="ui icon button" data-tooltip="添加到我的专栏" data-inverted="" data-position="right center">
+                    <i class="add icon"></i>
+                </a>
+
+                <span class="share-title">分享</span>
+
+                <a class="ui icon button" data-tooltip="分享到微信" data-inverted="" data-position="right center">
+                    <i class="wechat icon"></i>
+                </a>
+                <a class="ui icon button" data-tooltip="分享到微博" data-inverted="" data-position="right center">
+                    <i class="weibo icon"></i>
+                </a>
+                <a class="ui icon button" data-tooltip="分享到qq" data-inverted="" data-position="right center">
+                    <i class="qq icon"></i>
+                </a>
+            </div>
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">×
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                收入到我管理的专栏
+                            </h4>
+                            <a href=""></a>
+
+                        </div>
+                        <div class="modal-body form-group">
+                            <input type="text" class="form-control search-input" placeholder="搜索" autocomplete="off">
+                            <a class="search" href="javascript:document.searchForm.submit()" methods="get"><i class="iconfont icon-search"></i></a>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default"
+                                    data-dismiss="modal">关闭
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                                确定
+                            </button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <form class="comment-container">
+                <div class="comment-form comment">
+                    <a class="avatar">
+                        <img src="images/user-logo.jpg">
+                    </a>
+                    <div class="ui input comment-text">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="comment-btn">
+                    <button class="ui green submit button">评论</button>
+                    <button class="ui basic clear button">取消</button>
+                </div>
+            </form>
+
+            <div class="ui small comments comments-list">
+                <h3 class="ui dividing header">精彩评论</h3>
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="images/user-logo.jpg">
+                    </a>
+                    <div class="content">
+                        <a class="author" href="home.html" target="_blank">Matt</a>
+                        <div class="metadata">
+                            <span class="date">2018-11-20 14:23</span>
+                        </div>
+                        <div class="text">
+                            How artistic!
+                        </div>
+                        <div class="actions">
+                            <a class="reply">回复</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="images/user-logo.jpg">
+                    </a>
+                    <div class="content">
+                        <a class="author" href="home.html" target="_blank">Elliot Fu</a>
+                        <div class="metadata">
+                            <span class="date">2018-11-20 14:23</span>
+                        </div>
+                        <div class="text">
+                            <p>This has been very useful for my research. Thanks as well!</p>
+                        </div>
+                        <div class="actions">
+                            <a class="reply">回复</a>
+                        </div>
+                    </div>
+                    <div class="comments">
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="images/user-logo.jpg">
+                            </a>
+                            <div class="content">
+                                <a class="author" href="home.html" target="_blank">Jenny Hess</a>
+                                <div class="metadata">
+                                    <span class="date">2018-11-20 14:23</span>
+                                </div>
+                                <div class="text">
+                                    Elliot you are always so right :)
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">回复</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="images/user-logo.jpg">
+                    </a>
+                    <div class="content">
+                        <a class="author" href="home.html" target="_blank">Joe Henderson</a>
+                        <div class="metadata">
+                            <span class="date">2018-11-20 14:23</span>
+                        </div>
+                        <div class="text">
+                            Dude, this is awesome. Thanks so much
+                        </div>
+                        <div class="actions">
+                            <a class="reply">回复</a>
+                        </div>
+                    </div>
+                </div>
+                <!--<form class="ui reply form">
+                    <div class="field">
+                        <textarea class="reply-area"></textarea>
+                    </div>
+                    <div class="ui green labeled submit icon button">
+                        <i class="icon edit"></i>添加评论
+                    </div>
+                </form>-->
+            </div>
+
+        </div>
+
+        <div class="col-xs-2 banner-panel">
+            <div class="banner-300"></div>
+            <div class="banner-500"></div>
+        </div>
+        <!--作者信息-->
+       <!-- <aside class="col-xs-4 aside">
+            <div class="ui cards">
+                <div class="card">
+                    <div class="blurring dimmable image card-image">
+                        <div class="ui dimmer">
+                            <div class="content">
+                                <div class="center">
+                                    <div class="ui inverted button">关 注</div>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="card-img" src="images/user-logo.jpg">
+                    </div>
+                    <div class="content card-content">
+                        <a class="header card-header">Team Fu</a>
+                        <div class="description">
+                            没有摄影可能活不了！没有摄影可能活不了！没有摄影可能活不了！没有摄影可能活不了！
+                        </div>
+                    </div>
+                    <div class="ui grid delide-grid">
+                        <div class="four column row dc-column">
+                            <div class="column"><span class="dc-grid">145</span>原创</div>
+                            <div class="column"><span class="dc-grid">145</span>粉丝</div>
+                            <div class="column"><span class="dc-grid">145</span>关注</div>
+                            <div class="column"><span class="dc-grid">145</span>浏览量</div>
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <div class="ui two buttons">
+                            <div class="ui basic green button">关注</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>-->
+    </div>
+
+    <!--更多推荐-->
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2 more-recommend">
+            <button class="fluid ui button">加载更多文章</button>
+            <ul class="ui unstackable items index-list">
+                <li class="item">
+                    <div class="content article-right">
+                        <a class="header" href="blog.html" target="_blank">bootstrap的其他用法</a>
+                        <div class="description article-description">
+                            <p class="gray-text">的飞机日u开始剪短发i饿业开始</p>
+                        </div>
+                        <div class="comment-bar">
+                            <a class="authors-name" href="home.html">女博士</a>
+                            <span><i class="iconfont icon-liulan-mian"></i>5</span>
+                            <span><i class="iconfont icon-likefill"></i>5</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="blog.html" target="_blank"><img class="article-image" src="images/article-detail.jpg"></a>
+                    <div class="content article-right">
+                        <a class="header" href="blog.html" target="_blank">bootstrap的其他用法</a>
+                        <div class="description article-description">
+                            <p class="gray-text">的飞机日u开始剪短发i饿业开始的飞机日u开始剪短发i饿业开始的飞机日u开始剪短发i饿业开始的飞机日u开始剪短发i饿业开始的飞机日u开始剪短发i饿业开始的飞机日u开始剪短发i饿业开始的飞机日u开始剪短发i饿业开始</p>
+                        </div>
+                        <div class="comment-bar">
+                            <a class="authors-name" href="home.html">女博士</a>
+                            <span><i class="iconfont icon-liulan-mian"></i>5</span>
+                            <span><i class="iconfont icon-likefill"></i>5</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="blog.html" target="_blank"><img class="article-image" src="images/article-detail.jpg"></a>
+                    <div class="content article-right">
+                        <a class="header" href="blog.html" target="_blank">bootstrap的其他用法</a>
+                        <div class="description article-description">
+                            <p class="gray-text">的飞机日u开始剪短发i饿业开始</p>
+                        </div>
+                        <div class="comment-bar">
+                            <a class="authors-name" href="home.html">女博士</a>
+                            <span><i class="iconfont icon-liulan-mian"></i>5</span>
+                            <span><i class="iconfont icon-likefill"></i>5</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--跳到顶部-->
+<div class="side-tool">
+    <!--回到顶部-->
+    <a id="goToTop" class="ui icon button title-button">
+        <span class="iconfont icon-shouqi title-icon"></span>
+    </a>
+</div>
+
+
+
+</body>
+</html>

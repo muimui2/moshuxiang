@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.account-box{
+    padding: 30px;
+    background-color: white;
+    width: 100%;
+}
+
+
+.account-box li{
+    padding: 8px 0;
+}
+
+.account-box li .title{
+    font-size: 14px;
+    color: #555555;
+}
+
+.account-box li a{
+    font-size: 14px!important;
+}

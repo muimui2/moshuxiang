@@ -1,0 +1,162 @@
+<!--已完成-->
+
+<!DOCTYPE html>
+<html lang="zh-CN"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://cdn.bootcss.com/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.min.js"></script>
+    <![endif]-->
+
+    <!--common meta-->
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <title>深度学习综述 - 梅干菜锅盔 - 墨书香</title>
+    <meta name="keywords" content="墨书香,墨书香官网,图文编辑软件,墨书香下载,图文创作,创作软件,原创社区,小说,散文,写作,阅读"/>
+    <meta name="description" content="墨书香是一个优质的创作社区，在这里，你可以任性地创作，一篇短文、一张照片、一首诗、一幅画……我们相信，每个人都是生活中的艺术家，有着无穷的创造力。"/>
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!--  Meta for OpenGraph -->
+    <meta property="og:site_name" content="墨书香">
+    <meta property="og:title" content="梅干菜锅盔">
+    <meta property="og:url" content="https://www.moshuxiang.com/p/15631451">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="泡梅干菜可以咸一点，否则...">
+    <meta property="og:image" content="http://img.org/126154516551.png">
+
+    <!--common js & css-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+    <!--Iconfont-->
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_882094_9m8yax4xmj4.css">
+
+    <!--custom common-->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/search-prompt.css">
+    <script src="js/search-prompt.js"></script>
+    <script src="js/common.js"></script>
+
+    <!--private-->
+    <link rel="stylesheet" href="css/trems.css">
+
+</head>
+<body>
+
+<!--顶部导航-->
+<nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="ui secondary menu container">
+        <a class="menu-logo" href="index.html" target="_self"></a>
+        <a class="item discover-btn" href="index.html" target="_self">
+            发现
+        </a>
+        <form class="navbar-form navbar-left search-form" name="searchForm" role="search">
+            <div class="ui category search">
+                <div class="ui left icon input">
+                    <input class="prompt" type="text" placeholder="小程序/区块链">
+                    <i class="search icon"></i>
+                </div>
+            </div>
+        </form>
+
+        <div class="right menu">
+            <a class="ui item red-stroke" href="login.html" target="_blank">登录</a>
+            <a class="ui item red-stroke" href="sign_up.html" target="_blank">注册</a>
+            <a class="ui item red-btn" href="editor.html" target="_blank">写文章</a>
+            <div class="ui inline dropdown user-dropdown">
+                <div class="image">
+                    <img class="ui avatar image mini" src="images/user-logo.jpg">
+                    <span class="notification"></span>
+                </div>
+                <i class="dropdown icon"></i>
+                <div class="menu user-menu" data-filtered="filtered">
+                    <a class="item" href="home.html" target="_blank">
+                        <span class="iconfont icon-user"></span>
+                        我的主页
+                    </a>
+                    <a class="item" href="bookmark.html" target="_blank">
+                        <span class="iconfont icon-favorfill"></span>
+                        收藏的文章
+                    </a>
+                    <a class="item" href="follow-author.html" target="_blank">
+                        <span class="iconfont icon-likefill"></span>
+                        关注
+                    </a>
+                    <a class="item" href="message.html" target="_blank">
+                        <span class="iconfont icon-xiaoxi1"></span>
+                        消息
+                        <span class="ui red label">2</span>
+                    </a>
+                    <a class="item" href="setting.html" target="_blank">
+                        <span class="iconfont icon-shezhi"></span>
+                        设置
+                    </a>
+                    <a class="item" href="help.html" target="_blank">
+                        <span class="iconfont icon-communityfill"></span>
+                        帮助与反馈
+                    </a>
+                    <div>
+                        <form name="logout" method="post" action="" class="logout-form">
+                            <a href="javascript:document.logout.submit()" class="log-out">
+                                <span class="iconfont icon-icon"></span>
+                                退出
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container index privacy">
+    <h1>隐私声明</h1>
+    <p>[墨书香]网（以下简称[墨书香]）非常重视对您的个人隐私保护，有时候我们需要某些信息才能为您提供您请求的服务，本隐私声明解释了这些情况下的数据收集和使用情况。
+        本隐私声明适用于[墨书香]的所有相关服务，随着[墨书香]服务范围的扩大，隐私声明的内容可由[墨书香]随时更新，且毋须另行通知。更新后的隐私声明一旦在网页上公布即有效代替原来的隐私声明。</p>
+
+    <h2>我们收集哪些信息</h2>
+    <p>通常，您能在匿名的状态下访问[墨书香]并获取信息。当我们需要能识别您的个人信息或者可以与您联系的信息时，我们会征求您的同意。通常，在您注册[墨书香]或申请开通新的功能时，我们可能收集这些信息：姓名，Email地址，住址和电话号码，并征求您的确认。</p>
+    <h2>关于您的个人信息</h2>
+    <p>[墨书香]严格保护您个人信息的安全。我们使用各种安全技术和程序来保护您的个人信息不被未经授权的访问、使用或泄漏。</p>
+    <ul>
+        <li>满足法律或行政法规的明文规定，或者符合[墨书香]网站适用的法律程序；</li>
+        <li>符合[墨书香]相关服务条款、软件许可使用协议的约定；</li>
+        <li>保护[墨书香]的权利或财产，以及在紧急情况下保护[墨书香]员工、[墨书香]产品或服务的用户或大众的个人安全。</li>
+    </ul>
+    <p>[墨书香]不会未经您的允许将这些信息与第三方共享，本声明已经列出的上述情况除外。</p>
+
+    <h2>Cookie的使用</h2>
+    <p>使用 Cookie 能帮助您实现您的联机体验的个性化，您可以接受或拒绝 Cookie ，大多数 Web 浏览器会自动接受 Cookie，但您通常可根据自己的需要来修改浏览器的设置以拒绝 Cookie。</p>
+    <p>[墨书香]有时会使用 Cookie 以便知道哪些网站受欢迎，使您在访问[墨书香]时能得到更好的服务。Cookie不会跟踪个人信息。</p>
+    <p>当您注册[墨书香]时，[墨书香]亦会使用 Cookie。在这种情况下，[墨书香]会收集并存储有用信息，当您再次访问[墨书香]时，我们可辨认您的身份。来自[墨书香]的 Cookie 只能被[墨书香]读取。 </p>
+    <p>如果您的浏览器被设置为拒绝 Cookie，您仍然能够访问[墨书香]的大多数网页。</p>
+
+    <h2>关于免责说明</h2>
+    <p>就下列相关事宜的发生，[墨书香]不承担任何法律责任：</p>
+    <ul>
+        <li>由于您将用户密码告知他人或与他人共享注册帐户，由此导致的任何个人信息的泄漏，或其他非因[墨书香]原因导致的个人信息的泄漏；</li>
+        <li>[墨书香]根据法律规定或政府相关政策要求提供您的个人信息； 任何第三方根据[墨书香]各服务条款及声明中所列明的情况使用您的个人信息，由此所产生的纠纷；</li>
+        <li>任何由于黑客攻击、电脑病毒侵入或政府管制而造成的暂时性网站关闭；</li>
+        <li>因不可抗力导致的任何后果；</li>
+        <li>[墨书香]在各服务条款及声明中列明的使用方式或免责情形。</li>
+    </ul>
+</div>
+
+
+</body>
+</html>

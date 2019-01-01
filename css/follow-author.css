@@ -1,0 +1,261 @@
+@charset "UTF-8";
+/*
+.follow-author-title{
+    background-color: #be8dbd;
+    padding: 30px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border-radius: 3px;
+    -webkit-box-shadow: 1px 1px 2px #cccccc;
+    -moz-box-shadow: 1px 1px 2px #cccccc;
+    box-shadow: 1px 1px 2px #cccccc;
+}
+
+
+.follow-author-body .col-xs-4,.col-xs-3{
+    float: left;
+    margin-top: 14px;
+    padding: 0 7px;
+    position: relative;
+}
+
+.author-attention:hover{
+    -webkit-box-shadow: 0px 6px 40px #cccccc;
+    -moz-box-shadow: 0px 6px 40px #cccccc;
+    box-shadow: 0px 6px 40px #cccccc;
+}
+
+.author-attention{
+    position: relative;
+    height: 280px;
+    background-color: white;
+    border-radius: 3px;
+    -webkit-box-shadow: 1px 1px 2px #cccccc;
+    -moz-box-shadow: 1px 1px 2px #cccccc;
+    box-shadow: 1px 1px 2px #cccccc;
+    overflow: hidden;
+}
+
+.authors-content{
+    text-align: center;
+    padding: 30px 20px 0 20px;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.authors-avatar img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    z-index: 100;
+}
+
+.author-attention>a, .author-attention>span{
+    display: block;
+}
+
+.author-attention .green-btn{
+    padding: 5px 15px;
+    position: absolute;
+    bottom: 30px;
+}
+
+.author-attention .name{
+    font-weight: bold;
+    white-space: nowrap;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+
+
+.more-attention{
+    margin-top: 60px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.bg-transparent{
+    background-color: transparent;
+    padding: 0 0 50px 0;
+}
+
+.follow-author-body{
+    margin: 0 -7px;
+}
+
+!*文集*!
+
+.follow-corpus-title{
+    background-color: #c8db8c;
+}
+
+.corpus-attention .corpus-avator{
+    overflow: hidden;
+    height: 96px;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.corpus-attention .corpus-avator img{
+    width: 100%;
+    height: 100%;
+}
+
+.corpus-attention{
+    height: 340px;
+}
+
+.corpus-attention .authors-avatar img{
+    width: 40px;
+    height: 40px;
+}
+
+!*新写*!
+.follow-author-body .col-xs-3 img{
+    width: 100%;
+    border-radius: 3px;
+}
+
+.recommend-corpus{
+    padding: 10px;
+    height: 310px;
+}
+.recommend-corpus h4{
+    font-weight: bold;
+    padding:15px 0 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.corpus-info .gray-text{
+    -webkit-line-clamp: 1;
+    width: 70%;
+}
+
+
+
+.corpus-info>div{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.corpus-info .follow-corpus{
+    color: #42c02e;
+}
+
+!*推荐专栏*!
+.follow-column{
+    background-color: #d3217b;
+}
+
+.column-body .corpus-avator{
+    overflow: hidden;
+    background-color: #333333;
+    height: 120px;
+}
+
+.column-body .corpus-avator{
+    height: 135px;
+}
+
+.column-body{
+    height: 340px;
+}
+
+.homecolumn-meta{
+    padding: 15px 0;
+    font-size: 15px;
+    position: absolute;
+    bottom: 60px;
+}
+
+.homecolumn-meta .line{
+    margin: 0 5px;
+}
+
+.authors-content h4{
+    font-weight: bold;
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+
+!*热门文章*!
+.hot-article{
+    background-color: #efcf3c!important;
+}
+
+.recommend-intro{
+    padding-top: 5px;
+}
+
+.column-detail:hover, .column-detail{
+    -webkit-box-shadow: 1px 1px 2px #eeeeee;
+    -moz-box-shadow: 1px 1px 2px #eeeeee;
+    box-shadow: 1px 1px 2px #eeeeee;
+}
+
+.column-detail{
+    height: 370px;
+}
+
+.column-detail-btn{
+    margin-top: 20px;
+}
+
+.column-detail-body{
+    padding: 0;
+}
+
+.aside-column{
+    height: 150px!important;
+    overflow: hidden;
+}
+*/
+
+.authors-list .avatar{
+    display: inline-block;
+}
+
+.authors-list .avatar img{
+    width: 40px!important;
+    height: 40px!important;
+    margin-right: 8px!important;
+}
+
+.authors-list .item{
+    padding-top: 15px!important;
+    padding-bottom: 15px!important;
+}
+
+.authors-list .item .content{
+    display: inline-block;
+    font-size: 13px;
+}
+
+.authors-list .item .content .header{
+    font-size: 15px;
+    color: #333333!important;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+
+
+
+
+
+
+

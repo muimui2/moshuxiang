@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+.binding{
+    display: flex;
+    display: -webkit-flex;
+}
+
+.binding >li>.iconfont{
+    font-size: 20px;
+    margin-right: 5px;
+}
+.binding .icon-weibo{
+    color: #cc1420;
+}
+.binding .icon-weixin{
+    color: #42c02e;
+}
+
+.binding .icon-qq{
+    color: #0188fb;
+}
+
+.binding>li{
+    padding: 6px 20px 6px 0;
+}
+
+.binding a >.iconfont{
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.binded, .binded:hover {
+    color: #969696;
+}
+
+.remove-bind{
+    display: none;
+    margin-left: 15px;
+}
+
+.binded-li:hover .remove-bind{
+    display: block;
+}
+
+.binded-li{
+    display: flex;
+    display: -webkit-flex;
+}
+
+.setting-btn{
+    width: 85px;
+    margin-top: 30px;
+}

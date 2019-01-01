@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://cdn.bootcss.com/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.min.js"></script>
+    <![endif]-->
+
+    <!--common meta-->
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <title>编辑器 - 墨书香</title>
+    <meta name="keywords" content="墨书香,墨书香官网,图文编辑软件,墨书香下载,图文创作,创作软件,原创社区,小说,散文,写作,阅读"/>
+    <meta name="description" content="墨书香是一个优质的创作社区，在这里，你可以任性地创作，一篇短文、一张照片、一首诗、一幅画……我们相信，每个人都是生活中的艺术家，有着无穷的创造力。"/>
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!--  Meta for OpenGraph -->
+    <meta property="og:site_name" content="墨书香">
+    <meta property="og:title" content="梅干菜锅盔">
+    <meta property="og:url" content="https://www.moshuxiang.com/p/15631451">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="泡梅干菜可以咸一点，否则...">
+    <meta property="og:image" content="http://img.org/126154516551.png">
+
+    <!--common js & css-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+    <!--编辑器-->
+    <link rel="stylesheet" href="js/katex.min.css" />
+    <link rel="stylesheet" href="js/monokai-sublime.min.css" />
+    <link rel="stylesheet" href="js/quill.snow.css" />
+
+    <!--日期选择器-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/daterangepicker.min.css" />
+    <script src="js/daterange.js"></script>
+    <!--日期选择器-->
+
+    <!--Iconfont-->
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_882094_9m8yax4xmj4.css">
+
+    <!--custom common-->
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/common.js"></script>
+
+    <link rel="stylesheet" href="css/editor.css">
+
+
+</head>
+<body>
+
+<div class="container-fluid" >
+
+    <!--创建文章-->
+    <div class="col-xs-3">
+
+        <!--新建文集-->
+        <div class="folder">
+            <a href="index.html"><img src="images/user-logo.jpg"></a>
+            <div class="create-folder">
+
+                <div class="create-btn">
+                    <i class="iconfont icon-guanzhu1"></i>
+                    <span>新建文集</span>
+                </div>
+
+                <form class="ui form segment error segment-editor">
+                    <div class="field">
+                        <input class="editor-corpus" placeholder="请输入文集名..." name="name" type="text">
+                    </div>
+                    <button class="ui inverted submit green button">提交</button>
+                    <div class="ui inverted clear basic button">取消</div>
+                </form>
+
+                <div class="ui inverted relaxed divided list selection">
+                    <div class="item corpus-item folder-active">
+                        <div class="content">
+                            <div class="header">日记本</div>
+                            2018-12-3 21:27
+                        </div>
+                        <div>
+                            <i class="edit icon item-edit"></i>
+                            <i class="trash alternate icon"></i>
+                        </div>
+                    </div>
+                    <div class="item corpus-item">
+                        <div class="content">
+                            <div class="header">日记本</div>
+                            2018-12-3 21:27
+                        </div>
+                        <div>
+                            <i class="edit icon item-edit"></i>
+                            <i class="trash alternate icon"></i>
+                        </div>
+                    </div>
+                    <div class="item corpus-item">
+                        <div class="content">
+                            <div class="header">日记本</div>
+                            2018-12-3 21:27
+                        </div>
+                        <div>
+                            <i class="edit icon item-edit"></i>
+                            <i class="trash alternate icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--新建文章-->
+        <div class="file-name">
+            <div class="create-btn">
+                <i class="iconfont icon-guanzhu1"></i>
+                <span>新建文章</span>
+            </div>
+            <div class="ui inverted relaxed divided list selection editor-article">
+                <div class="item corpus-item folder-active">
+                    <div class="content">
+                        <div class="header"><i class="icon file outline"></i>bootstrap的用法</div>
+                        0字
+                    </div>
+                    <div>
+                        <div class="ui right pointing dropdown editor-move">
+                            <i class="share square icon item-edit"></i>
+                            <div class="menu" data-filtered="filtered">
+                                <div class="item" data-filtered="filtered">
+                                    文集
+                                </div>
+                                <div class="item" data-filtered="filtered">
+                                    日记本
+                                </div>
+                                <div class="item" data-filtered="filtered">
+                                    我的故事
+                                </div>
+                            </div>
+                        </div>
+                        <i class="trash alternate icon"></i>
+                    </div>
+                </div>
+                <div class="item corpus-item">
+                    <div class="content">
+                        <div class="header"><i class="icon file outline"></i>bootstrap的用法</div>
+                        1452字
+                    </div>
+                    <div>
+                        <div class="ui right pointing dropdown editor-move">
+                            <i class="share square icon item-edit"></i>
+                            <div class="menu" data-filtered="filtered">
+                                <div class="item" data-filtered="filtered">
+                                    文集
+                                </div>
+                                <div class="item" data-filtered="filtered">
+                                    日记本
+                                </div>
+                                <div class="item" data-filtered="filtered">
+                                    我的故事
+                                </div>
+                            </div>
+                        </div>
+                        <i class="trash alternate icon"></i>
+                    </div>
+                </div>
+                <div class="item corpus-item">
+                    <div class="content">
+                        <div class="header"><i class="icon file outline"></i>bootstrap的用法</div>
+                        0字
+                    </div>
+                    <div>
+                        <div class="ui right pointing dropdown editor-move">
+                            <i class="share square icon item-edit"></i>
+                            <div class="menu" data-filtered="filtered">
+                                <div class="item" data-filtered="filtered">
+                                    文集
+                                </div>
+                                <div class="item" data-filtered="filtered">
+                                    日记本
+                                </div>
+                                <div class="item" data-filtered="filtered">
+                                    我的故事
+                                </div>
+                            </div>
+                        </div>
+                        <i class="trash alternate icon"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--编写文章-->
+    <div class="col-xs-9" >
+
+        <!--文章标题-->
+        <div class="editor-title">
+            <div class="ui transparent input editor-title-input">
+                <input type="text" placeholder="标题...">
+            </div>
+
+            <!--定时发布-->
+            <div class="ui floating  icon dropdown button editor-publish">
+                <span class="text">立即发布</span>
+                <div class="menu" data-filtered="filtered">
+                    <div class="item" data-filtered="filtered">
+                        立即发布
+                    </div>
+                    <div class="item" data-filtered="filtered"  data-toggle="modal" data-target="#myModal">
+                        定时发布
+                    </div>
+                    <div class="item" data-filtered="filtered">
+                        存为草稿
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--定时发布选择时间-->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                                aria-hidden="true">×
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            选择文章发表时间
+                        </h4>
+                    </div>
+                    <div class="modal-body form-group daterange">
+                        <input class="form-control" name="range_date" type="text">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default"
+                                data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            确定
+                        </button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        <!--编辑器-->
+        <div id="editor">
+
+        </div>
+    </div>
+</div>
+
+<script src="js/katex.min.js"></script>
+<script src="js/highlight.min.js"></script>
+<script src="js/quill.js"></script>
+<script>
+
+
+    var toolbarOptions = [
+        ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+        ['blockquote', 'code-block'],
+
+        [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+        [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+        [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+        [{ 'direction': 'rtl' }],                         // text direction
+        [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+        [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+        [{ 'font': [] }],
+        [{ 'align': [] }],
+        ['link', 'image'],
+        ['clean']                                         // remove formatting button
+    ];
+
+    var quill = new Quill('#editor', {
+        modules: {
+            syntax: true,
+            formula: true,
+            toolbar: toolbarOptions
+        },
+        theme: 'snow',
+        history: {
+            delay: 2000,
+            maxStack: 500,
+            userOnly: true
+        }
+    });
+
+</script>
+</body>
+</html>

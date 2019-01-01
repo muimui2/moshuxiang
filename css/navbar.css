@@ -1,0 +1,188 @@
+@charset "UTF-8";
+/*顶部导航*/
+.log-out, .log-out:hover, .log-out:focus, .log-out:active{
+    color: rgba(0, 0, 0, 0.87)!important;
+}
+
+.navbar-fixed-top{
+    border-bottom: 1px solid #f0f0f0;
+    background-color: white;
+    margin-bottom: 0;
+}
+
+.container{
+    padding: 0;
+}
+
+.ui.secondary.menu.container{
+    width: 960px;
+    height: 56px;
+}
+
+.ui.secondary.menu.container a{
+    margin: 0!important;
+}
+
+.ui.secondary.menu.container .menu-logo{
+    background: url("../images/moshuxiang.svg") no-repeat center center;
+    margin-right: 13px!important;
+    background-size: 100%;
+    width: 100px;
+    height: 100%;
+}
+
+.ui.secondary.menu.container>a:nth-child(2){
+    font-size: 16px;
+}
+
+.navbar.navbar-fixed-top .ui.avatar{
+    margin: 0!important;
+    margin-right: 12px!important;
+}
+
+.navbar.navbar-fixed-top .ui.inline.dropdown .menu{
+    margin-top: 0!important;
+}
+
+.navbar-fixed-top .ui.menu .ui.dropdown .menu>.active.item{
+    font-size: 14px!important;
+    font-weight: 400!important;
+    color: #333333!important;
+}
+
+.ui.menu .ui.dropdown .menu>.selected.item, .ui.menu .ui.dropdown .menu>.active.item{
+    background-color: white!important;
+}
+
+.navbar-fixed-top .user-menu .selected, .navbar-fixed-top .user-menu .item:active, .navbar-fixed-top .user-menu .item:focus{
+    background: white!important;
+}
+
+.ui.menu .ui.dropdown .menu>.active.item:hover{
+    background: rgba(0,0,0,.05)!important;
+}
+
+.navbar .right.menu .notification{
+    position: absolute;
+    background-color: #ff646d;
+    text-align: center;
+    border-radius: 50%!important;
+    width: 12px!important;
+    height: 12px!important;
+    font-size: 11px;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 12px;
+    top: 6px;
+    right: 10px;
+}
+
+
+.navbar.navbar-fixed-top .ui.inline.dropdown{
+    display: -webkit-flex!important;
+    display: flex!important;
+    align-items: center!important;
+    padding-left: 20px;
+}
+
+/*
+紅色边框按钮*/
+.red-stroke{
+    border: 1px solid #ec414d!important;
+    background-color: transparent;
+    border-radius: 3px!important;
+    color: #ec414d!important;
+}
+
+.red-stroke:hover{
+    background-color: rgba(236, 65, 77, 0.06) !important;
+}
+
+/*红色按钮*/
+.red-btn{
+    background-color: #ec414d!important;
+    color: white!important;
+    border-radius: 3px!important;
+}
+
+.red-btn:hover{
+    background-color: #e31725!important;
+    color: white!important;
+}
+
+.right.menu .ui.item.red-stroke, .right.menu .ui.item.red-btn{
+    margin-left: 20px!important;
+}
+
+.ui .red.empty.circular.label{
+    position: absolute;
+    right: 3px;
+    top: 7px;
+}
+
+.ui.inline.dropdown .iconfont{
+    color: #ec414d;
+    margin-right: 8px !important;
+    font-size: 15px;
+}
+
+.ui.inline.dropdown>.menu>.item{
+    width: 160px!important;
+}
+
+.ui.menu .ui.dropdown .menu>.item{
+    padding: 20px!important;
+}
+
+.user-menu .logout-form{
+    width: 160px!important;
+}
+
+.user-menu .log-out{
+    width: 100%!important;
+    display: inline-block;
+    padding: 20px!important;
+    line-height: 14px;
+}
+
+.user-menu .log-out:hover{
+    background-color: rgba(0,0,0,0.05);
+}
+
+.ui.inline.dropdown .item .ui.red.label{
+    float: right;
+    margin: 0!important;
+    padding: 1px 5px!important;
+}
+
+.right.menu>.ui.item.red-stroke{
+    padding: 8px 18px!important;
+}
+
+.right.menu>.ui.item.red-btn{
+    padding: 9px 18px!important;
+}
+
+.navbar-form{
+    margin: 0!important;
+    padding: 9px 15px!important;
+}
+
+.discover-btn, .discover-btn-index{
+    border-radius: 3px!important;
+}
+
+.discover-btn:hover{
+    color: #ec414d!important;
+}
+
+.discover-btn-index:hover{
+    color: #e31725!important;
+}
+
+@media screen and (max-width: 960px){
+    .navbar.navbar-fixed-top{
+        width: 960px!important;
+        height: 56px!important;
+    }
+}

@@ -1,0 +1,422 @@
+@charset "UTF-8";
+
+.ql-snow .ql-picker.ql-header .ql-picker-label::before, .ql-snow .ql-picker.ql-header .ql-picker-item::before {
+    content: '标题';
+}
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="1"]::before, .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="1"]::before {
+    content: 'H1';
+}
+
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="2"]::before, .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="2"]::before {
+    content: 'H2';
+}
+
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="3"]::before, .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="3"]::before {
+    content: 'H3';
+}
+
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="4"]::before, .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="4"]::before {
+    content: 'H4';
+}
+
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="5"]::before, .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="5"]::before {
+    content: 'H5';
+}
+
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="6"]::before, .ql-snow .ql-picker.ql-header .ql-picker-item[data-value="6"]::before {
+    content: 'H6';
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-label::before, .ql-snow .ql-picker.ql-size .ql-picker-item::before {
+    content: '字号';
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value=small]::before, .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=small]::before {
+    content: '小';
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-label::before, .ql-snow .ql-picker.ql-size .ql-picker-item::before {
+    content: '中';
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value=large]::before, .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=large]::before {
+    content: '大';
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-label[data-value=huge]::before, .ql-snow .ql-picker.ql-size .ql-picker-item[data-value=huge]::before {
+    content: '特大';
+}
+
+.ql-snow .ql-tooltip.ql-editing a.ql-action::after {
+    content: '保存';
+}
+
+.element.style {
+     left: 0;
+}
+
+.ql-snow .ql-tooltip[data-mode=link]::before {
+    content: "输入地址：";
+}
+
+.ql-snow .ql-tooltip a.ql-action::after {
+    content: '修改';
+}
+
+.ql-snow .ql-tooltip a.ql-remove::before {
+    content: '去除';
+}
+
+.ql-snow .ql-tooltip::before {
+    content: "URL:";
+}
+
+.ql-editor{
+    width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 40px 40px 80px;
+    margin-bottom: 0;
+    resize: none;
+    color: #333;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    overflow: auto;
+}
+
+
+.container-fluid{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+.col-xs-3,.col-xs-9{
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    background-color:#333333;
+    color: #f2f2f2;
+    height: 100vh;
+    padding: 0;
+}
+
+.col-xs-9{
+    background-color: white;
+}
+
+.folder{
+    height: 50%;
+    background-color: #333333;
+    overflow-y: auto;
+    flex-direction: column;
+}
+
+.folder>a>img{
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
+.create-folder{
+    padding: 0 15px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.create-btn{
+    cursor: pointer;
+    color: #f2f2f2;
+    margin-bottom: 10px;
+}
+
+.create-btn> .iconfont{
+    font-size: 10px;
+    margin-right: 4px;
+}
+.create-form input{
+    width: 100%;
+    height: 35px;
+    color: white;
+    background-color: #595959;
+    border: none;
+    padding: 4px 6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    outline: none;
+}
+
+
+.create-form .create-btn{
+    color: #42c02e;
+    background-color: #333333;
+    border: 1px solid #42c02e;
+    padding: 4px 12px;
+    outline: none;
+    border-radius: 3px;
+}
+
+.create-form .create-btn:hover{
+    background-color: #444444;
+}
+
+.cancel{
+    background-color: #333333;
+    color: #9b9b9b;
+    border: none;
+    outline: none;
+    margin-left: 15px;
+}
+
+.folder-name{
+    margin-top: 10px;
+}
+
+.folder-name>li{
+    padding: 10px 30px 10px 12px;
+    cursor: pointer;
+    border-left: 3px solid #333333;
+}
+.folder-active{
+    background-color: #434343!important;
+    border-left: 3px solid #ec414d!important;
+}
+
+.editor-corpus{
+    border: none!important;
+    border-radius: 0!important;
+    color: white;
+    background-color: #434343!important;
+}
+
+.folder-name>li>.delede, .folder-name>li>.modify{
+    float: right;
+    margin-left: 20px;
+}
+
+.file-name{
+    height: 50%;
+    background-color: #333333;
+    overflow-y: auto;
+    border-top:20px solid #292929;
+    padding: 20px 15px 30px 15px;
+}
+
+.file{
+    height: 70px;
+    vertical-align: middle;
+    position: relative;
+
+}
+.file-icon{
+    font-size: 25px;
+    color: #cccccc;
+    margin-right: 5px;
+}
+
+.word-num{
+    bottom: 2px;
+    left: 5px;
+    font-size: 9px;
+    line-height: 16px;
+    position: absolute;
+}
+
+.file>.delede, .file>.modify{
+    margin-top: 10px;
+}
+
+.move-to{
+    border-radius: 5px;
+    overflow: hidden;
+    position: absolute;
+    left:240px;
+    display: none;
+}
+
+.move-to>li{
+    background-color: white;
+    padding: 10px 20px 10px 20px;
+    border-bottom: 1px solid #d9d9d9;
+    max-width: 140px;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #333333;
+    text-overflow: ellipsis; /* for IE */
+    -o-text-overflow: ellipsis; /* for Opera */
+    -icab-text-overflow: ellipsis; /* for iCab */
+    -khtml-text-overflow: ellipsis; /* for Konqueror Safari */
+    -moz-text-overflow: ellipsis; /* for Firefox,mozilla */
+    -webkit-text-overflow: ellipsis; /* for Safari,Swift*/
+}
+
+.move-to>li:hover{
+    background-color: #333333;
+    color: white;
+}
+
+.modify:hover .move-to{
+    display: block;
+}
+
+/*.article-title{*/
+    /*width: 100%;*/
+    /*padding: 0 150px 10px 40px;*/
+    /*margin-bottom: 0;*/
+    /*border: none;*/
+    /*font-size: 30px;*/
+    /*font-weight: 400;*/
+    /*line-height: 30px;*/
+    /*-webkit-box-shadow: none;*/
+    /*box-shadow: none;*/
+    /*color: #595959;*/
+    /*background-color: transparent;*/
+    /*outline: none;*/
+    /*border-radius: 0;*/
+    /*overflow: hidden;*/
+    /*-o-text-overflow: ellipsis;*/
+    /*text-overflow: ellipsis;*/
+    /*white-space: nowrap;*/
+    /*margin-top: 20px;*/
+/*}*/
+
+.editor-title{
+    padding-right: 20px!important;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center!important;
+}
+
+.editor-publish{
+    margin: 0px!important;
+}
+
+.editor-title-input{
+    padding: 10px 20px!important;
+    font-size: 30px!important;
+    width: 100%!important;
+    font-weight: 600!important;
+}
+
+.ql-toolbar.ql-snow {
+    border: none;
+    background-color: #d6d6d6;
+}
+
+
+.col-xs-9{
+    overflow-y: hidden;
+}
+
+.publicize{
+    border: none;
+    outline: none;
+    padding: 8px 20px;
+}
+
+/*定时发布*/
+.btn-primary{
+    background-color: #ec414d;
+    border-color: #ec414d;
+}
+
+.btn-primary:hover{
+    background-color: #e31725;
+    border-color: #e31725;
+}
+
+.btn-primary:focus, .btn-primary:active{
+    background-color: #cc1420!important;
+    border-color: #cc1420!important;
+    outline: none!important;
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover{
+    background-color: #ec414d;
+}
+
+.daterangepicker select.hourselect, .daterangepicker select.minuteselect, .daterangepicker select.secondselect, .daterangepicker select.ampmselect{
+    width: 70px;
+    background: #f7f7f7;
+    border: 1px solid #eee;
+    padding: 5px;
+    outline: 0;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.modal{
+    color: #333333;
+}
+
+.modal-header{
+    text-align: center;
+}
+
+.modal-dialog{
+    width: 300px;
+}
+
+.segment-editor{
+    background-color: transparent!important;
+    padding: 0!important;
+}
+
+.ui.inverted.clear.basic.button{
+    box-shadow: none!important;
+}
+
+.editor-publish{
+    padding: 11px 15px!important;
+    width: 100px!important;
+    height: 36px!important;
+}
+
+.corpus-item{
+    display: flex!important;
+    display: -webkit-flex!important;
+    justify-content: space-between!important;
+    align-items: center!important;
+}
+
+.corpus-item:after{
+    display: none!important;
+}
+
+.item-edit{
+    margin-right: 15px!important;
+}
+
+.editor-move{
+    margin: 0!important;
+    height: 14px!important;
+}
+
+.corpus-item{
+    padding-top: 10px!important;
+    padding-bottom: 10px!important;
+}
+
+
+
+
+
+
+
+
+
+

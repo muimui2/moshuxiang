@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.search-result-body .article-link{
+    width: 120px!important;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+
+}
+
+.blue, .blue:hover, .blue:active, .blue:visited{
+    color: #4183c4;
+}
+
+.orange, .orange:hover, .orange:active, .orange:visited{
+    color: #ff851b;
+}
+
+.purple, .purple:hover, .purple:active, .purple:visited{
+    color: #dc73ff;
+}

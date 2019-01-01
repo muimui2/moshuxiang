@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+ol,ul,li { list-style:none; }
+
+.login-content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/bg_01.jpg");
+}
+
+.login{
+    background-color: white;
+    width: 400px;
+}
+
+.login-header{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.login-header>a>img{
+    display: block;
+    height: 64px;
+    padding-bottom: 15px;
+}
+
+.login-header>span{
+    font-size: 22px;
+    color: #ec414d;
+}
+
+.login-body{
+    padding: 0 40px 0 40px;
+}
+
+.reset-input{
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 30px;
+    font-size: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid #cdcdcd;
+}
+
+.login-form .field input{
+    border: none!important;
+    border-bottom: 1px solid #cdcdcd!important;
+    border-radius: 0px!important;
+    font-size: 15px!important;
+}
+
+.login-form .field input:focus::-webkit-input-placeholder, .reset-input:focus::-webkit-input-placeholder{
+    color: #bdbdbd!important;
+}
+
+.login-form .field input:focus, .reset-input:focus{
+    border-bottom: 1px solid #bdbdbd !important;
+}
+
+.login-password{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+
+.login-options{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.login-options>label:hover{
+    cursor: pointer;
+}
+
+.login-btn{
+    padding: 10px 0;
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-top: 30px;
+}
+
+.login-btn:hover{
+    cursor: pointer;
+}
+
+.more-login{
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+}
+
+.more-login>h6{
+    text-align: center;
+    color: #b5b5b5;
+    font-size: 12px;
+    font-weight: normal;
+
+}
+
+.more-login>h6:before{
+    content: "";
+    border-bottom: 1px solid rgba(150, 150, 150, 0.31);
+    display: block;
+    position: absolute;
+    top: 8px;
+    width: 90px;
+}
+
+.more-login>h6:after{
+    content: "";
+    border-bottom: 1px solid rgba(150, 150, 150, 0.31);
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 90px;
+}
+
+.more-login>ul a .iconfont{
+    font-size: 28px;
+}
+
+.more-login>ul{
+    padding: 20px 50px;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-weibo{
+    color: #cc1420;
+}
+
+.icon-weixin{
+    color: #42c02e;
+    font-size: 25px!important;
+}
+
+ .icon-qq{
+    color: #0188fb;
+}
+
+.signup-switch{
+    background-color: #f6f6f6;
+    text-align: center;
+    padding: 20px 40px;
+    font-size: 16px;
+
+ }
+
+.signup-switch>a, .sign-up-msg>a{
+    color: #ec414d;
+}
+
+.sign-up-msg{
+    text-align: center;
+    padding: 10px 0;
+    font-size: 13px;
+    line-height: 20px;
+    color: #969696;
+}
+
+.more-sign-up{
+    margin-top: 10px;
+}
+
+.lose-pwd{
+    color: #969696;
+}
+
+.back{
+    float: left;
+    color: #969696!important;
+    font-size: 14px;
+}
+
+.login-body .ui.button.fluid.green{
+    margin-top: 40px;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 10px;
+}
+

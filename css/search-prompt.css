@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+
+.ui.search.category{
+    left: 0;
+}
+
+.ui.search .category{
+    display: flex!important;
+    display: -webkit-flex!important;
+    flex-direction: column;
+    background-color: white!important;
+}
+
+.ui.search .content{
+    display: flex!important;
+    display: -webkit-flex!important;
+    align-items: center;
+}
+
+.ui.search .image{
+    width: 38px!important;
+    height: 38px!important;
+    display: inline-block;
+    border-radius: 3px;
+}
+
+.ui.search .search-summary{
+    display: flex!important;
+    display: -webkit-flex!important;
+    flex-direction: column;
+}
+
+.ui.search>.results.transition{
+    border-radius: 3px!important;
+    padding: 10px 0 18px 0!important;
+    border: none!important;
+    -webkit-box-shadow: 0px 1px 10px #d4d4d4!important;
+    -moz-box-shadow: 0px 1px 10px #d4d4d4!important;
+    box-shadow: 0px 1px 10px #d4d4d4!important;
+}
+
+.ui.search .prompt{
+    border-radius: 3px!important;
+    width: 390px!important;
+}
+
+.ui.search .result{
+    padding: 8px 15px!important;
+    border: none!important;
+}
+
+.ui.search .name{
+    color: #666666!important;
+    font-size: 12px!important;
+    padding-left: 15px!important;
+}
+
+.ui.search .results>a:hover{
+    background-color: #efefef!important;
+}
+
+.ui.search .results>a{
+    display: block;
+    color: #333333!important;
+}
+
+.ui.search .results, .ui.search .name{
+    border: none!important;
+}
+
+.ui.search .description{
+    font-size: 12px!important;
+    color: #969696!important;
+    margin-top: 3px!important;
+}
+
+.ui.search .title{
+    font-weight: bold;
+}
+
+.ui.search .search-user-image{
+    width: 38px!important;
+    height: 38px!important;
+    border-radius: 50%!important;
+}
+
+.ui.search .search-collection-image{
+    border-radius: 10px!important;
+}
+
+.ui.search .title, .ui.search .description, .ui.search .name{
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+}
+
+.ui.search .image-container{
+    width: 38px;
+    height: 38px;
+    margin-right: 10px;
+}

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+.search-input, .search-result{
+    padding: 20px;
+    background-color: white;
+}
+
+.search-result{
+    margin-top: 25px;
+}
+
+.admin-user .ui.blue.segment>.ui.button{
+    margin-left: 0!important;
+    margin-right: 12px!important;
+}
+
+.common-hit{
+    color: #282828;
+}
+
+.data-table{
+    margin-top: 12px;
+}
+
+.data-table>p{
+    display: inline-block!important;
+}
+
+.data-table>p:first-child{
+    margin-right: 12px;
+}
+
+.ui.celled.padded.table{
+    margin-top: 0!important;
+}
+
+.ui.checkbox input,.ui.checkbox label{
+    margin: 0!important;
+    padding: 0!important;
+}
+
+.normal-button{
+    margin-top: 20px!important;
+    width: 92px!important;
+}
+
+.cancle-button{
+    margin-right: 50px!important;
+}

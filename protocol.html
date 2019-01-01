@@ -1,0 +1,245 @@
+<!--已完成-->
+
+<!DOCTYPE html>
+<html lang="zh-CN"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://cdn.bootcss.com/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.min.js"></script>
+    <![endif]-->
+
+    <!--common meta-->
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <title>墨书香协议（草案） - 墨书香</title>
+    <meta name="keywords" content="墨书香,墨书香官网,图文编辑软件,墨书香下载,图文创作,创作软件,原创社区,小说,散文,写作,阅读"/>
+    <meta name="description" content="墨书香是一个优质的创作社区，在这里，你可以任性地创作，一篇短文、一张照片、一首诗、一幅画……我们相信，每个人都是生活中的艺术家，有着无穷的创造力。"/>
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!--  Meta for OpenGraph -->
+    <meta property="og:site_name" content="墨书香">
+    <meta property="og:title" content="梅干菜锅盔">
+    <meta property="og:url" content="https://www.moshuxiang.com/p/15631451">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="泡梅干菜可以咸一点，否则...">
+    <meta property="og:image" content="http://img.org/126154516551.png">
+
+    <!--common js & css-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+    <!--Iconfont-->
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_882094_9m8yax4xmj4.css">
+
+    <!--custom common-->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/search-prompt.css">
+    <script src="js/search-prompt.js"></script>
+    <script src="js/common.js"></script>
+
+    <!--private-->
+    <link rel="stylesheet" href="css/trems.css">
+
+
+</head>
+<body>
+
+<!--顶部导航-->
+<nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="ui secondary menu container">
+        <a class="menu-logo" href="index.html" target="_self"></a>
+        <a class="item discover-btn" href="index.html" target="_self">
+            发现
+        </a>
+        <form class="navbar-form navbar-left search-form" name="searchForm" role="search">
+            <div class="ui category search">
+                <div class="ui left icon input">
+                    <input class="prompt" type="text" placeholder="小程序/区块链">
+                    <i class="search icon"></i>
+                </div>
+            </div>
+        </form>
+
+        <div class="right menu">
+            <a class="ui item red-stroke" href="login.html" target="_blank">登录</a>
+            <a class="ui item red-stroke" href="sign_up.html" target="_blank">注册</a>
+            <a class="ui item red-btn" href="editor.html" target="_blank">写文章</a>
+            <div class="ui inline dropdown user-dropdown">
+                <div class="image">
+                    <img class="ui avatar image mini" src="images/user-logo.jpg">
+                    <span class="notification"></span>
+                </div>
+                <i class="dropdown icon"></i>
+                <div class="menu user-menu" data-filtered="filtered">
+                    <a class="item" href="home.html" target="_blank">
+                        <span class="iconfont icon-user"></span>
+                        我的主页
+                    </a>
+                    <a class="item" href="bookmark.html" target="_blank">
+                        <span class="iconfont icon-favorfill"></span>
+                        收藏的文章
+                    </a>
+                    <a class="item" href="follow-author.html" target="_blank">
+                        <span class="iconfont icon-likefill"></span>
+                        关注
+                    </a>
+                    <a class="item" href="message.html" target="_blank">
+                        <span class="iconfont icon-xiaoxi1"></span>
+                        消息
+                        <span class="ui red label">2</span>
+                    </a>
+                    <a class="item" href="setting.html" target="_blank">
+                        <span class="iconfont icon-shezhi"></span>
+                        设置
+                    </a>
+                    <a class="item" href="help.html" target="_blank">
+                        <span class="iconfont icon-communityfill"></span>
+                        帮助与反馈
+                    </a>
+                    <div>
+                        <form name="logout" method="post" action="" class="logout-form">
+                            <a href="javascript:document.logout.submit()" class="log-out">
+                                <span class="iconfont icon-icon"></span>
+                                退出
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container index trems">
+    <h1>墨书香协议（草案）</h1>
+    <p>欢迎您来到墨书香。</p>
+    <p>请您仔细阅读以下条款，如果您对本协议的任何条款表示异议，您可以选择不进入墨书香。当您注册成功，无论是进入墨书香，还是在墨书香上发布任何内容（即「内容」），均意味着您（即「用户」）完全接受本协议项下的全部条款。</p>
+    <div>
+        <h2>使用规则</h2>
+        <ol>
+            <li>用户注册成功后，墨书香将给予每个用户一个用户帐号及相应的密码，该用户帐号和密码由用户负责保管；用户应当对以其用户帐号进行的所有活动和事件负法律责任。</li>
+            <li>用户须对在墨书香的注册信息的真实性、合法性、有效性承担全部责任，用户不得冒充他人；不得利用他人的名义发布任何信息；不得恶意使用注册帐号导致其他用户误认；否则墨书香有权立即停止提供服务，收回其帐号并由用户独自承担由此而产生的一切法律责任。</li>
+            <li>用户直接或通过各类方式（如 RSS 源和站外 API 引用等）间接使用墨书香服务和数据的行为，都将被视作已无条件接受本协议全部内容；若用户对本协议的任何条款存在异议，请停止使用墨书香所提供的全部服务。</li>
+            <li>墨书香是一个信息分享、传播及获取的平台，用户通过墨书香发表的信息为公开的信息，其他第三方均可以通过墨书香获取用户发表的信息，用户对任何信息的发表即认可该信息为公开的信息，并单独对此行为承担法律责任；任何用户不愿被其他第三人获知的信息都不应该在墨书香上进行发表。</li>
+            <li>用户承诺不得以任何方式利用墨书香直接或间接从事违反中国法律以及社会公德的行为，墨书香有权对违反上述承诺的内容予以删除。</li>
+            <li>用户不得利用墨书香服务制作、上载、复制、发布、传播或者转载如下内容：
+                <ul>
+                    <li>反对宪法所确定的基本原则的；</li>
+                    <li>危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；</li>
+                    <li>损害国家荣誉和利益的；</li>
+                    <li>煽动民族仇恨、民族歧视，破坏民族团结的；</li>
+                    <li>侮辱、滥用英烈形象，否定英烈事迹，美化粉饰侵略战争行为的；</li>
+                    <li>破坏国家宗教政策，宣扬邪教和封建迷信的；</li>
+                    <li>散布谣言，扰乱社会秩序，破坏社会稳定的；</li>
+                    <li>散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；</li>
+                    <li>侮辱或者诽谤他人，侵害他人合法权益的；</li>
+                    <li>含有法律、行政法规禁止的其他内容的信息。</li>
+                </ul></li>
+
+            <li>墨书香有权对用户使用墨书香的情况进行审查和监督，如用户在使用墨书香时违反任何上述规定，墨书香或其授权的人有权要求用户改正或直接采取一切必要的措施（包括但不限于更改或删除用户张贴的内容、暂停或终止用户使用墨书香的权利）以减轻用户不当行为造成的影响。</li>
+        </ol>
+    </div>
+    <div>
+        <h2>知识产权</h2>
+        <p>墨书香是一个信息获取、分享及传播的平台，我们尊重和鼓励墨书香用户创作的内容，认识到保护知识产权对墨书香生存与发展的重要性，承诺将保护知识产权作为墨书香运营的基本原则之一。</p>
+        <ol>
+            <li>
+                用户在墨书香上发表的全部原创内容（包括但不仅限于回答、文章和评论），著作权均归用户本人所有。用户可授权第三方以任何方式使用，不需要得到墨书香的同意。
+            </li>
+            <li>墨书香上可由多人参与编辑的内容，包括但不限于问题及补充说明、答案总结、话题描述、话题结构，所有参与编辑者均同意，相关知识产权归墨书香所有。</li>
+            <li>墨书香提供的网络服务中包含的标识、版面设计、排版方式、文本、图片、图形等均受著作权、商标权及其它法律保护，未经相关权利人（含墨书香及其他原始权利人）同意，上述内容均不得在任何平台被直接或间接发布、使用、出于发布或使用目的的改写或再发行，或被用于其他任何商业目的。 </li>
+            <li>为了促进知识的分享和传播，用户将其在墨书香上发表的全部内容，授予墨书香免费的、不可撤销的、非独家使用许可，墨书香有权将该内容用于墨书香各种形态的产品和服务上，包括但不限于网站以及发表的应用或其他互联网产品。</li>
+            <li>第三方若出于非商业目的，将用户在墨书香上发表的内容转载在墨书香之外的地方，应当在作品的正文开头的显著位置注明原作者姓名（或原作者在墨书香上使用的帐号名称），给出原始链接，注明「发表于墨书香」，并不得对作品进行修改演绎。若需要对作品进行修改，或用于商业目的，第三方应当联系用户获得单独授权，按照用户规定的方式使用该内容。</li>
+            <li>墨书香为用户提供「保留所有权利，禁止转载」的选项。除非获得原作者的单独授权，任何第三方不得转载标注了「禁止转载」的内容，否则均视为侵权。</li>
+            <li>在墨书香上传或发表的内容，用户应保证其为著作权人或已取得合法授权，并且该内容不会侵犯任何第三方的合法权益。如果第三方提出关于著作权的异议，墨书香有权根据实际情况删除相关的内容，且有权追究用户的法律责任。给墨书香或任何第三方造成损失的，用户应负责全额赔偿。</li>
+            <li>如果任何第三方侵犯了墨书香用户相关的权利，用户同意授权墨书香或其指定的代理人代表墨书香自身或用户对该第三方提出警告、投诉、发起行政执法、诉讼、进行上诉，或谈判和解，并且用户同意在墨书香认为必要的情况下参与共同维权。</li>
+            <li>墨书香有权但无义务对用户发布的内容进行审核，有权根据相关证据结合《侵权责任法》、《信息网络传播权保护条例》等法律法规及墨书香社区指导原则对侵权信息进行处理。</li>
+        </ol>
+    </div>
+    <div>
+        <h2>个人隐私</h2>
+        <p>尊重用户个人隐私信息的私有性是墨书香的一贯原则，墨书香将通过技术手段、强化内部管理等办法充分保护用户的个人隐私信息，除法律或有法律赋予权限的政府部门要求或事先得到用户明确授权等原因外，墨书香保证不对外公开或向第三方透露用户个人隐私信息，或用户在使用服务时存储的非公开内容。同时，为了运营和改善墨书香的技术与服务，墨书香将可能会自行收集使用或向第三方提供用户的非个人隐私信息，这将有助于墨书香向用户提供更好的用户体验和服务质量。</p>
+        <p>如果用户不希望被搜索引擎检索，可在「个人设置」中修改「个人信息」部分的设置，对于站外的用户与搜索引擎，你的姓名会显示为「墨书香用户」，头像图片也将被隐藏。</p>
+        <p>您使用或继续使用我们的服务，即意味着同意我们按照墨书香<a class="privacy-link" href="protocol-privacy.html">《隐私政策》</a>收集、使用、储存和分享您的相关信息。详情请参见墨书香<a class="privacy-link" href="protocol-privacy.html">《隐私政策》</a></p>
+    </div>
+    <div>
+        <h2>侵权举报</h2>
+        <lo>
+            <li>
+                <p class="trems-privacy">处理原则</p>
+                <p>墨书香作为知识讨论社区，高度重视自由表达和个人、企业正当权利的平衡。依照法律规定删除违法信息是墨书香社区的法定义务，墨书香社区亦未与任何中介机构合作开展此项业务。</p>
+            </li>
+            <li>
+                <p class="trems-privacy">受理范围</p>
+                <p>受理墨书香社区内侵犯企业或个人合法权益的侵权举报，包括但不限于涉及个人隐私、造谣与诽谤、商业侵权。</p>
+                <ul>
+                    <li>涉及个人隐私：发布内容中直接涉及身份信息，如个人姓名、家庭住址、身份证号码、工作单位、私人电话等详细个人隐私；</li>
+                    <li>造谣、诽谤：发布内容中指名道姓（包括自然人和企业）的直接谩骂、侮辱、虚构中伤、恶意诽谤等；</li>
+                    <li>商业侵权：泄露企业商业机密及其他根据保密协议不能公开讨论的内容。</li>
+                </ul>
+            </li>
+            <li>
+                <p class="trems-privacy">举报条件</p>
+                <p>用户在墨书香发表的内容仅表明其个人的立场和观点，并不代表墨书香的立场或观点。如果个人或企业发现墨书香上存在侵犯自身合法权益的内容，可以先尝试与作者取得联系，通过沟通协商解决问题。如您无法联系到作者，或无法通过与作者沟通解决问题，您可通过点击内容下方的举报按钮来向墨书香平台进行投诉。为了保证问题能够及时有效地处理，请务必提交真实有效、完整清晰的材料，否则投诉将无法受理。您需要向墨书香提供的投诉材料包括：</p>
+                <ol>
+                    <li>权利人对涉嫌侵权内容拥有商标权、著作权和/或其他依法可以行使权利的权属证明，权属证明通常是营业执照或组织机构代码证；</li>
+                    <li>举报人的身份证明，身份证明可以是身份证或护照；</li>
+                    <li>如果举报人非权利人，请举报人提供代表权利人进行举报的书面授权证明。</li>
+                    <li>为确保投诉材料的真实性，在侵权举报中，您还需要签署以下法律声明：
+                        <ul>
+                            <li>我本人为所举报内容的合法权利人；</li>
+                            <li>我举报的发布在墨书香社区中的内容侵犯了本人相应的合法权益；</li>
+                            <li>如果本侵权举报内容不完全属实，本人将承担由此产生的一切法律责任，并承担和赔偿墨书香因根据投诉人的通知书对相关帐号的处理而造成的任何损失，包括但不限于墨书香因向被投诉方赔偿而产生的损失及墨书香名誉、商誉损害等。</li>
+                        </ul>
+                    </li>
+
+                </ol>
+            </li>
+            <li>
+                <p class="trems-privacy">处理流程</p>
+                <p>出于网络平台的监督属性，并非所有申请都必须受理。墨书香自收到举报的七个工作日内处理完毕并给出回复。处理期间，不提供任何电话、邮件及其他方式的查询服务。</p>
+                <p>出现墨书香已经删除或处理的内容，但是百度、谷歌等搜索引擎依然可以搜索到的现象，是因为百度、谷歌等搜索引擎自带缓存，此类问题墨书香无权也无法处理，因此相关申请不予受理。您可以自行联系搜索引擎服务商进行处理。</p>
+                <p>此为墨书香社区唯一的官方侵权投诉渠道，暂不提供其他方式处理此业务。</p>
+                <p>用户在墨书香中的商业行为引发的法律纠纷，由交易双方自行处理，与墨书香无关。</p>
+
+            </li>
+        </lo>
+    </div>
+    <div>
+        <h2>免责申明</h2>
+        <ol>
+            <li>墨书香不能对用户发表的回答或评论的正确性进行保证。</li>
+            <li>用户在墨书香发表的内容仅表明其个人的立场和观点，并不代表墨书香的立场或观点。作为内容的发表者，需自行对所发表内容负责，因所发表内容引发的一切纠纷，由该内容的发表者承担全部法律及连带责任。墨书香不承担任何法律及连带责任。</li>
+            <li>墨书香不保证网络服务一定能满足用户的要求，也不保证网络服务不会中断，对网络服务的及时性、安全性、准确性也都不作保证。</li>
+            <li>对于因不可抗力或墨书香不能控制的原因造成的网络服务中断或其它缺陷，墨书香不承担任何责任，但将尽力减少因此而给用户造成的损失和影响。</li>
+
+        </ol>
+    </div>
+    <div>
+        <h2>协议修改</h2>
+        <ol>
+            <li>根据互联网的发展和有关法律、法规及规范性文件的变化，或者因业务发展需要，墨书香有权对本协议的条款作出修改或变更，一旦本协议的内容发生变动，墨书香将会直接在墨书香网站上公布修改之后的协议内容，该公布行为视为墨书香已经通知用户修改内容。墨书香也可采用电子邮件或私信的传送方式，提示用户协议条款的修改、服务变更、或其它重要事项。</li>
+            <li>如果不同意墨书香对本协议相关条款所做的修改，用户有权并应当停止使用墨书香。如果用户继续使用墨书香，则视为用户接受墨书香对本协议相关条款所做的修改。</li>
+        </ol>
+    </div>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.message-box{
+    padding: 20px;
+    background-color: white;
+}
+
+.message-box .accordion{
+    box-shadow: none!important;
+}
+
+.message-box .accordion .title{
+    font-size: 15px!important;
+    color: #555555!important;
+}
+
+.message-box .accordion .content{
+    color: #666666!important;
+}
+
+.message-box .accordion .message-aware{
+    color: #5a5a5a!important;
+}
+
+.message-box .notification-page{
+    margin: 18px 0!important;
+}
+
+/*.message-box .ui.right.floated.pagination.menu{*/
+    /*box-shadow: none!important;*/
+    /*border: none!important;*/
+/*}*/
+
+/*.message-box .ui.right.floated.pagination.menu .item{*/
+    /*background-color: #f1f1f1;*/
+    /*margin-right: 4px;*/
+    /*border-radius: 50%!important;*/
+/*}*/
+
+/*.message-box .ui.right.floated.pagination.menu .item:hover{*/
+    /*background-color: #ebebeb;*/
+/*}*/
+
+/*.message-box .ui.right.floated.pagination.menu .item:before{*/
+    /*display: none!important;*/
+/*}*/

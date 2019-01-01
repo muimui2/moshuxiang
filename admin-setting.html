@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置-墨书香</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Author" content="网页作者" />
+    <meta name="Copyright" content="网站版权" />
+    <meta name="keywords" content="网站关键字" />
+    <meta name="description" content="网站描述" />
+    <link rel="Shortcut Icon" href="网站.ico图标路径" />
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_882094_n3dlxlbboea.css">
+    <link rel="stylesheet" href="css/admin-common.css">
+    <link rel="stylesheet" href="css/admin-setting.css">
+
+</head>
+<body>
+
+<!--顶部导航栏-->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="logo-header" href="admin-index.html">
+                墨书香
+            </a>
+
+        </div>
+        <!--向左对齐-->
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <div class="ui left icon input">
+                    <input type="text" name="q" placeholder="搜索" autocomplete="off">
+                    <i class="search icon"></i>
+                </div>
+            </div>
+        </form>
+
+        <!--向右对齐-->
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle my-notification" data-toggle="dropdown">
+                    <i class="bell outline icon admin-message"></i>
+                    <span class="notification"></span>
+                </a>
+                <ul class="dropdown-menu notify-message">
+                    <li><a class="notify-message-item" href="#">
+                        <button class="ui circular green icon button">
+                            <i class="user plus icon"></i>
+                        </button>
+                        <div class="notify-content">
+                            <span class="title">新注册用户</span>
+                            <span class="time">1998-12-04 12:00:44</span>
+                        </div>
+                    </a></li>
+
+                    <li><a class="notify-message-item" href="#">
+                        <button class="ui circular yellow icon button">
+                            <i class="comment icon"></i>
+                        </button>
+                        <div class="notify-content">
+                            <span class="title">收到反馈信息</span>
+                            <span class="time">2020-08-03 02:00:44</span>
+                        </div>
+                    </a></li>
+
+                    <li class="more-message"><a href="admin-notification.html">查看更多<i class="angle right icon pull-right"></i></a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle my-action" data-toggle="dropdown">
+                    <img class="admin-logo" src="images/user-logo.jpg"><b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu my-action-menu">
+                    <li><a href="admin-account.html"><i class="home icon"></i>账号信息</a></li>
+                    <li><a data-toggle="modal" href="#myModal"><i class="edit icon"></i>修改密码</a></li>
+                    <li><a href="#"><i class="cog icon"></i>设置</a></li>
+                    <li><a href="#"><i class="power off icon"></i>退出</a></li>
+                </ul>
+
+
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--侧边栏菜单-->
+<div class="side-bar">
+    <ul class="side-ul">
+        <li><a class="side-item" href="admin-index.html">
+            <i class="tachometer alternate icon"></i>仪表盘
+            <i class="ui black label">8</i>
+        </a></li>
+
+        <li><a class="side-item" href="admin-user.html">
+            <i class="user outline icon"></i>用户管理
+            <i class="ui black label">5</i>
+        </a></li>
+
+        <li><a class="side-item" href="admin-article.html">
+            <i class="file outline alternate icon"></i>文章管理
+            <i class="ui black label">2</i>
+        </a></li>
+
+        <li><a class="side-item" href="admin-corpus.html">
+            <i class="folder outline icon"></i>文集管理
+            <i class="ui black label">3</i>
+        </a></li>
+
+        <li><a class="side-item" href="admin-subject.html">
+            <i class="envelope open outline icon"></i>专栏管理
+            <i class="ui black label">1</i>
+        </a></li>
+
+        <li><a class="side-item" href="admin-feedback.html">
+            <i class="comment outline icon"></i>反馈管理
+            <i class="ui black label">4</i>
+        </a></li>
+
+        <li><a class="side-item" href="admin-message.html">
+            <i class="bell outline icon"></i>消息管理
+            <i class="ui black label">6</i>
+        </a></li>
+
+        <li><a class="side-item item-active" href="admin-setting.html">
+            <i class="sun outline icon"></i>设置
+            <i class="ui purple label">new</i>
+        </a></li>
+    </ul>
+</div>
+
+<!--当前页面主要内容-->
+<div class="main-panel">
+    <div class="setting-box">
+
+    </div>
+</div>
+
+<!--修改密码-->
+<div class="modal fade update-password" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">修改密码</h4>
+            </div>
+            <div class="modal-body">
+                <form class="ui form">
+                    <div class="field inline">
+                        <label>原始密码</label>
+                        <input type="text" name="first-name" placeholder="请输入原始密码">
+                    </div>
+                    <div class="field inline">
+                        <label>修改密码</label>
+                        <input type="text" name="last-name" placeholder="请输入新密码">
+                    </div>
+                    <div class="field inline">
+                        <label>重复密码</label>
+                        <input type="text" name="last-name" placeholder="请重复输入密码">
+                    </div>
+                    <button class="ui button" data-dismiss="modal">取消</button>
+                    <button class="ui green button" type="submit">确认</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+</body>
+</html>

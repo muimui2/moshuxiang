@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>消息管理-墨书香</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Author" content="网页作者" />
+    <meta name="Copyright" content="网站版权" />
+    <meta name="keywords" content="网站关键字" />
+    <meta name="description" content="网站描述" />
+    <link rel="Shortcut Icon" href="网站.ico图标路径" />
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_882094_n3dlxlbboea.css">
+    <link rel="stylesheet" href="css/admin-common.css">
+    <link rel="stylesheet" href="css/admin-public.css">
+    <script src="js/admin-message.js"></script>
+
+</head>
+<body>
+
+<!--顶部导航栏-->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="logo-header" href="admin-index.html">
+                墨书香
+            </a>
+
+        </div>
+        <!--向左对齐-->
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <div class="ui left icon input">
+                    <input type="text" name="q" placeholder="搜索" autocomplete="off">
+                    <i class="search icon"></i>
+                </div>
+            </div>
+        </form>
+
+        <!--向右对齐-->
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle my-notification" data-toggle="dropdown">
+                    <i class="bell outline icon admin-message"></i>
+                    <span class="notification"></span>
+                </a>
+                <ul class="dropdown-menu notify-message">
+                    <li><a class="notify-message-item" href="#">
+                        <button class="ui circular green icon button">
+                            <i class="user plus icon"></i>
+                        </button>
+                        <div class="notify-content">
+                            <span class="title">新注册用户</span>
+                            <span class="time">1998-12-04 12:00:44</span>
+                        </div>
+                    </a></li>
+
+                    <li><a class="notify-message-item" href="#">
+                        <button class="ui circular yellow icon button">
+                            <i class="comment icon"></i>
+                        </button>
+                        <div class="notify-content">
+                            <span class="title">收到反馈信息</span>
+                            <span class="time">2020-08-03 02:00:44</span>
+                        </div>
+                    </a></li>
+
+                    <li class="more-message"><a href="admin-notification.html">查看更多<i class="angle right icon pull-right"></i></a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle my-action" data-toggle="dropdown">
+                    <img class="admin-logo" src="images/user-logo.jpg"><b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu my-action-menu">
+                    <li><a href="admin-account.html"><i class="home icon"></i>账号信息</a></li>
+                    <li><a data-toggle="modal" href="#myModal"><i class="edit icon"></i>修改密码</a></li>
+                    <li><a href="admin-setting.html"><i class="cog icon"></i>设置</a></li>
+                    <li><a href="#"><i class="power off icon"></i>退出</a></li>
+                </ul>
+
+
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--侧边栏菜单-->
+<div class="side-bar">
+    <ul class="side-ul">
+        <li><a class="side-item" href="admin-index.html">
+            <i class="tachometer alternate icon"></i>仪表盘
+            <i class="ui black label">8</i>
+        </a></li>
+
+        <li><a class="side-item" href="admin-user.html">
+            <i class="user outline icon"></i>用户管理
+            <i class="ui black label">5</i>
+        </a></li>
+
+        <li><a class="side-item" href="admin-article.html">
+            <i class="file outline alternate icon"></i>文章管理
+            <i class="ui black label">2</i>
+        </a></li>
+
+        <li><a class="side-item" href="admin-corpus.html">
+            <i class="folder outline icon"></i>文集管理
+            <i class="ui black label">3</i>
+        </a></li>
+
+        <li><a class="side-item" href="admin-subject.html">
+            <i class="envelope open outline icon"></i>专栏管理
+            <i class="ui black label">1</i>
+        </a></li>
+
+        <li><a class="side-item" href="admin-feedback.html">
+            <i class="comment outline icon"></i>反馈管理
+            <i class="ui black label">4</i>
+        </a></li>
+
+        <li><a class="side-item item-active" href="admin-message.html">
+            <i class="bell outline icon"></i>消息管理
+            <i class="ui black label">6</i>
+        </a></li>
+
+        <li><a class="side-item" href="admin-setting.html">
+            <i class="sun outline icon"></i>设置
+            <i class="ui purple label">new</i>
+        </a></li>
+    </ul>
+</div>
+
+<!--当前页面主要内容-->
+<div class="main-panel">
+    <!--搜索条件-->
+    <div class="search-input">
+        <div class="ui form">
+            <div class="inline fields">
+                <div class="three wide field ui left icon input">
+                    <input type="text" placeholder="消息标题">
+                    <i class="file alternate outline icon"></i>
+                </div>
+                <div class="four wide field ui left icon input">
+                    <input type="email" placeholder="消息内容">
+                    <i class="envelope outline icon"></i>
+                </div>
+                <div class="one wide field">
+                    <div class="ui selection dropdown semantic-dropdown">
+                        <input type="hidden" name="gender">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">消息类型</div>
+                        <div class="menu">
+                            <div class="item" data-value="2">系统通告</div>
+                            <div class="item" data-value="1">提醒</div>
+                            <div class="item" data-value="0">私信</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="inline fields">
+
+                <div class="inline field">
+                    <div class="ui input icon daterange search-date">
+                        <input class="" name="range_date" type="text">
+                        <i class="icon link calendar alternate outline"></i>
+                    </div>
+                </div>
+
+                <div class="inline field">
+                    <button class="green ui button">搜索</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--搜索结果-->
+    <div class="search-result">
+        <div class="search-result-header">
+            <button class="ui button" data-toggle="modal" data-target="#addUserModal">
+                <i class="icon paper plane"></i>
+                发送消息
+            </button>
+            <!-- 创建用户模态框（Modal） -->
+            <div class="modal" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true">×
+                            </button>
+                            <h4 class="modal-title" id="addUserModal-title">
+                                添加消息
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="ui form">
+                                <div class="field ui left input">
+                                    <input type="text" placeholder="消息标题">
+                                </div>
+                                <div class="field inline">
+                                    <div class="ui selection dropdown semantic-dropdown">
+                                        <input type="hidden" name="gender">
+                                        <i class="dropdown icon"></i>
+                                        <div class="default text">发送范围</div>
+                                        <div class="menu">
+                                            <div class="item" data-value="2">超级管理员</div>
+                                            <div class="item" data-value="1">普通管理员</div>
+                                            <div class="item" data-value="0">用户</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field inline">
+                                    <div class="ui selection dropdown semantic-dropdown">
+                                        <input type="hidden" name="gender">
+                                        <i class="dropdown icon"></i>
+                                        <div class="default text">信息类型</div>
+                                        <div class="menu">
+                                            <div class="item" data-value="2">系统公告</div>
+                                            <div class="item" data-value="1">提醒</div>
+                                            <div class="item" data-value="0">私信</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label>消息内容(支持html模板)</label>
+                                    <textarea rows="2" style="margin-top: 0px; margin-bottom: 0px; height: 150px;resize: none"></textarea>
+                                </div>
+                                <div class="field inline">
+                                    <div class="ui input icon daterange single-daterange">
+                                        <input class="" name="range_date" type="text">
+                                        <i class="icon link calendar alternate outline"></i>
+                                    </div>
+                                </div>
+
+                                <button class="ui button normal-button cancle-button" data-dismiss="modal" type="button">取消</button>
+                                <button class="green ui button normal-button" type="submit">发布</button>
+                            </form>
+                        </div>
+
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <button class="ui button">
+                <i class="icon trash alternate"></i>
+                批量删除
+            </button>
+            <div class="ui button floating dropdown icon semantic-dropdown">
+                更多操作
+                <i class="dropdown icon admin-dropdown-icon"></i>
+                <div class="menu">
+                    <div class="item">导出所选数据</div>
+                    <div class="item">导出全部数据</div>
+                </div>
+            </div>
+
+            <div class="data-table">
+                <p>已选择 <span class="common-hit">5</span> 项</p>
+                <p>搜索总数 <span class="common-hit">15454</span></p>
+            </div>
+        </div>
+
+        <div class="search-result-body">
+            <table class="ui celled padded table">
+                <thead>
+                    <tr>
+                        <th class="single line">
+                            <div class="ui checkbox master"><input type="checkbox" tabindex="0" class="hidden"></div>
+                         </th>
+                        <th>#</th>
+                        <th>审核</th>
+                        <th>信息标题</th>
+                        <th>内容</th>
+                        <th>信息类型</th>
+                        <th>发送范围</th>
+                        <th>浏览量</th>
+                        <th>浏览占比</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="ui checkbox child"><input type="checkbox" tabindex="0" class="hidden"></div>
+                    </td>
+                    <td class="single line">
+                        12
+                    </td>
+                    <td>
+                        <div class="ui slider checkbox"><input type="checkbox" name="newsletter"></div>
+                    </td>
+                    <td>放假通知</td>
+                    <td>新年放假通知详情大沙河赛若金挖空了瑞哇啦降低少二手挖掘卡女的叫啥开路</td>
+                    <td>系统公告</td>
+                    <td>普通管理员</td>
+                    <td>145154</td>
+                    <td>50%</td>
+                    <td>2018/07/12</td>
+                    <td>
+                        <button class="ui basic green button delete">撤回</button>
+                        <button class="ui basic red button delete">删除</button>
+                    </td>
+                </tr>
+
+                </tbody>
+
+                <tfoot>
+                <tr><th colspan="17">
+                    <div class="ui right floated pagination menu">
+                        <a class="icon item">
+                            <i class="left chevron icon"></i>
+                        </a>
+                        <a class="item">1</a>
+                        <a class="item">2</a>
+                        <a class="item">3</a>
+                        <a class="item">4</a>
+                        <a class="icon item">
+                            <i class="right chevron icon"></i>
+                        </a>
+                    </div>
+                </th>
+                </tr>
+                </tfoot>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<!--修改密码-->
+<div class="modal fade update-password" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">修改密码</h4>
+            </div>
+            <div class="modal-body">
+                <form class="ui form">
+                    <div class="field inline">
+                        <label>原始密码</label>
+                        <input type="text" name="first-name" placeholder="请输入原始密码">
+                    </div>
+                    <div class="field inline">
+                        <label>修改密码</label>
+                        <input type="text" name="last-name" placeholder="请输入新密码">
+                    </div>
+                    <div class="field inline">
+                        <label>重复密码</label>
+                        <input type="text" name="last-name" placeholder="请重复输入密码">
+                    </div>
+                    <button class="ui button" data-dismiss="modal">取消</button>
+                    <button class="ui green button" type="submit">确认</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+</body>
+</html>

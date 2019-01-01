@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+.bookmark-title{
+    font-weight: bold;
+    padding: 30px 15px;
+    font-size: 18px;
+    color: white;
+    border-radius: 3px;
+    background-color: rgba(236, 65, 77, 0.7);
+}
+
+.bookmark-title span{
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.cancel-mark{
+    display: none;
+    color: #b1b1b1;
+    font-size: 13px;
+}
+
+.cancel-mark:hover{
+    color: #333333;
+}
+
+.bm-item>li:hover .cancel-mark{
+    display: inline-block;
+}
+
+.bookmark-body li{
+    padding: 35px 40px;
+}
+
+.col-xs-9.main .main.main-index.bm-item{
+    padding-top: 30px;
+}
